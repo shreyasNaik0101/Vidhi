@@ -54,6 +54,8 @@ export function resolve(versions, { mdFamily, entityCode, clauseNumber, asOf }) 
         validTo: v.validTo,
         effectiveDate: null,
         note: null,
+        sourceRef: v.sourceRef ?? null,
+        issuedDate: v.issuedDate ?? null,
       };
     }
   }

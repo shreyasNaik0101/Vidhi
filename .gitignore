@@ -26,6 +26,9 @@ Thumbs.db
 # Node / UI
 node_modules/
 ui/dist/
+*.tsbuildinfo
+ui/vite.config.js
+ui/vite.config.d.ts
 
 # AWS CDK
 infra/cdk.out/

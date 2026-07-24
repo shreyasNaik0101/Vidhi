@@ -8,14 +8,19 @@ export async function listEntities(pool) {
   return rows;
 }
 
-/** Clause versions for an entity+family (optionally one clause), mapped to camelCase. */
+/** Clause versions for an entity+family (optionally one clause), mapped to camelCase.
+ *  Each version carries the issue date and ref of the amendment that created it —
+ *  the time ribbon needs issued vs effective to show the "published != in force" gap. */
 export async function loadClauseVersions(pool, { mdFamily, entityCode, clauseNumber }) {
   const params = [mdFamily, entityCode];
   let sql = `
     SELECT c.md_family, e.code, c.clause_number, c.sort_key, c.chapter,
-           c.text, c.valid_from, c.valid_to
+           c.text, c.valid_from, c.valid_to,
+           d.issued_date, d.rbi_ref
     FROM clause c
     JOIN entity_type e ON e.id = c.entity_type_id
+    LEFT JOIN amendment_op op ON op.id = c.created_by_op_id
+    LEFT JOIN document d ON d.id = op.amendment_doc_id
     WHERE c.md_family = $1 AND e.code = $2`;
   if (clauseNumber) {
     sql += ' AND c.clause_number = $3';
@@ -33,6 +38,8 @@ export async function loadClauseVersions(pool, { mdFamily, entityCode, clauseNum
     text: r.text,
     validFrom: r.valid_from,
     validTo: r.valid_to,
+    issuedDate: r.issued_date,
+    sourceRef: r.rbi_ref,
   }));
 }
 
