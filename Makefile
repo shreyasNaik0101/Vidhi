@@ -25,6 +25,16 @@ db-sync:          ## run the pipeline on samples and persist into Postgres
 db-resolve:       ## example: as-of query against Postgres (the date flip)
 	python -m rbi.db.cli resolve --entity RRB --clause 68C --as-of 2026-10-02
 
+# --- API (Node + Express, reads Postgres) ---
+api-install:      ## install API deps
+	cd api && npm install
+
+api-test:         ## run the ported-resolver tests
+	cd api && npm test
+
+api-dev:          ## start the API on :3001 (needs db-up + db-sync first)
+	cd api && npm start
+
 # --- quality ---
 test:             ## run the test suite
 	python -m pytest -q

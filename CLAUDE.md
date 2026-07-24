@@ -472,7 +472,13 @@ is the single most valuable artifact in the repo.
 
 ## 10. React UI (`ui/`)
 
-Vite + React + TypeScript. FastAPI backend in `src/rbi/query/api.py`.
+Vite + React + TypeScript. Backend API in `api/` (Node + Express).
+
+> Deviation from the original brief (which named FastAPI): the backend is Node +
+> Express by project preference. The pipeline stays in Python and fills Postgres
+> (`make db-sync`); the API only reads. The one piece of real logic — the as-of
+> resolver — is ported to JS and tested (`api/test/resolve.test.js`) so Python and
+> JS agree. The document wins over the spec (§13); this note records the change.
 
 ### Design brief
 
