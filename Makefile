@@ -1,0 +1,61 @@
+# RBI Regulatory Timeline Engine — every stage has a target (CLAUDE.md §4).
+# POSIX make. On Windows, run targets under Git Bash or invoke the python commands directly.
+
+.PHONY: install db-up db-down db-logs test lint extract cost \
+        fetch normalise classify parse verify apply group eval pipeline aws-destroy
+
+export PYTHONPATH := src
+
+# --- setup ---
+install:          ## install package + dev deps
+	python -m pip install -e ".[dev,llm,api]"
+
+db-up:            ## start Postgres+pgvector (Docker)
+	docker compose up -d
+
+db-down:          ## stop Postgres
+	docker compose down
+
+db-logs:
+	docker compose logs -f db
+
+# --- quality ---
+test:             ## run the test suite
+	python -m pytest -q
+
+lint:
+	ruff check src tests
+
+# --- pipeline stages (§6) ---
+fetch:            ## [stage 1] scrape RBI notifications (not yet implemented)
+	@echo "TODO: src/rbi/fetch — respect robots.txt, 1 req / 2s"
+
+extract:          ## [stage 2-3] extract + normalise sample PDFs
+	python -m rbi.extract.cli --limit 2
+
+classify:         ## [stage 4] regex-first, gemma3:4b fallback (not yet implemented)
+	@echo "TODO: src/rbi/classify"
+
+parse:            ## [stage 5] qwen3:8b -> strict JSON ops (not yet implemented)
+	@echo "TODO: src/rbi/parse"
+
+verify:           ## [stage 6] Bedrock verifier — the only paid step (not yet implemented)
+	@echo "TODO: src/rbi/verify"
+
+apply:            ## [stage 7] materialise clause timeline (not yet implemented)
+	@echo "TODO: src/rbi/apply"
+
+group:            ## [stage 8] link change across entity types (not yet implemented)
+	@echo "TODO: src/rbi/group"
+
+pipeline: fetch extract classify parse verify apply group  ## run all stages in order
+
+# --- cost / eval ---
+cost:             ## print LLM spend by stage and model
+	python -m rbi.llm.cost
+
+eval:             ## run the golden-set eval (not yet implemented)
+	@echo "TODO: src/rbi/eval — always report accuracy AND coverage"
+
+aws-destroy:      ## tear down all AWS resources
+	@echo "TODO: infra — cdk destroy"

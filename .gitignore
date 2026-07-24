@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Env / secrets
+.env
+
+# Data — raw downloads and caches are not committed. samples/ and golden/ ARE.
+data/raw/
+data/llm_cache.db
+data/*.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node / UI
+node_modules/
+ui/dist/
+
+# AWS CDK
+infra/cdk.out/

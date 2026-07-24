@@ -1,0 +1,10 @@
+{
+  "_comment": "USD per 1M tokens. VERIFY against the AWS Bedrock pricing page before any bulk run (CLAUDE.md §7). Local Ollama models are free.",
+  "_verified_on": "2026-07-24 (values are placeholders pending confirmation against live AWS pricing)",
+  "models": {
+    "anthropic.claude-3-haiku-20240307-v1:0":      {"input_per_1m": 0.25, "output_per_1m": 1.25},
+    "anthropic.claude-3-5-sonnet-20240620-v1:0":   {"input_per_1m": 3.00, "output_per_1m": 15.00},
+    "gemma3:4b":                                    {"input_per_1m": 0.0,  "output_per_1m": 0.0},
+    "qwen3:8b":                                     {"input_per_1m": 0.0,  "output_per_1m": 0.0}
+  }
+}

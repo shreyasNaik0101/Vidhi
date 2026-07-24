@@ -1,0 +1,44 @@
+[project]
+name = "rbi-timeline"
+version = "0.1.0"
+description = "RBI Regulatory Timeline Engine — entity- and time-aware clause resolution"
+requires-python = ">=3.11"
+dependencies = [
+    "pymupdf>=1.24",
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "psycopg[binary]>=3.1",
+    "python-dotenv>=1.0",
+    "pydantic>=2.6",
+    "typer>=0.12",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+llm = [
+    "boto3>=1.34",
+    "sentence-transformers>=2.6",
+]
+api = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
