@@ -19,6 +19,12 @@ db-down:          ## stop Postgres
 db-logs:
 	docker compose logs -f db
 
+db-sync:          ## run the pipeline on samples and persist into Postgres
+	python -m rbi.db.cli sync --model gemma4:latest
+
+db-resolve:       ## example: as-of query against Postgres (the date flip)
+	python -m rbi.db.cli resolve --entity RRB --clause 68C --as-of 2026-10-02
+
 # --- quality ---
 test:             ## run the test suite
 	python -m pytest -q

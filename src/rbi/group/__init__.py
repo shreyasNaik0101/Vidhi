@@ -3,6 +3,7 @@
 Within a single issued_date, operations whose new_text is near-identical are the
 same policy landing at different clause coordinates (RRB 68C == LAB 119C). The
 stored similarity score — ~0.957 for the SNFA pair — is the reference value.
+Persistence of change groups to Postgres lives in rbi.db.sync.
 """
 from .models import ChangeGroup, ChangeGroupMember, OpRef
 from .build import group_ops
