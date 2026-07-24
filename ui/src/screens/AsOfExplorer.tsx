@@ -57,7 +57,7 @@ export function AsOfExplorer() {
     <div className="stack">
       <div className="card card-pad">
         <div className="controls">
-          <div className="field">
+          <div className="field entity">
             <label htmlFor="entity">Regulated entity</label>
             <select id="entity" value={entity} onChange={(e) => setEntity(e.target.value)}>
               {entities.map((e) => (
@@ -76,7 +76,7 @@ export function AsOfExplorer() {
               ))}
             </select>
           </div>
-          <div className="field" style={{ flex: '1.4' }}>
+          <div className="field wide">
             <label htmlFor="asof">As of date</label>
             <div className="stepper">
               <button className="step-btn" onClick={() => setAsOf(addDays(asOf, -1))} aria-label="Previous day">−1d</button>
@@ -88,7 +88,7 @@ export function AsOfExplorer() {
           </div>
         </div>
 
-        <div style={{ marginTop: 22 }}>
+        <div style={{ marginTop: 16 }}>
           <TimeRibbon
             value={asOf}
             min={domain.min}

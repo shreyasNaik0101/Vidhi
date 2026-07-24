@@ -38,7 +38,7 @@ export function ClauseTimeline() {
     <div className="stack">
       <div className="card card-pad">
         <div className="controls">
-          <div className="field">
+          <div className="field entity">
             <label htmlFor="tl-entity">Regulated entity</label>
             <select id="tl-entity" value={entity} onChange={(e) => setEntity(e.target.value)}>
               {entities.map((e) => <option key={e.code} value={e.code}>{e.name} ({e.code})</option>)}
