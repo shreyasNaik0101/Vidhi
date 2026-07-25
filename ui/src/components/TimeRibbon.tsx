@@ -19,6 +19,7 @@ export function TimeRibbon({ value, min, max, issued, effective, onChange }: Pro
   const span = Math.max(1, hi - lo);
 
   const pct = (iso: string) => ((toEpochDay(iso) - lo) / span) * 100;
+  const clampPct = (iso: string) => Math.min(100, Math.max(0, pct(iso)));
 
   const setFromClientX = useCallback(
     (clientX: number) => {
@@ -86,7 +87,7 @@ export function TimeRibbon({ value, min, max, issued, effective, onChange }: Pro
 
         <div
           className="ribbon-handle"
-          style={{ left: `${pct(value)}%` }}
+          style={{ left: `${clampPct(value)}%` }}
           role="slider"
           tabIndex={0}
           aria-label="As-of date"

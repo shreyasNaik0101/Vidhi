@@ -18,6 +18,25 @@ export function Ingest() {
   const [running, setRunning] = useState(false);
   const [answer, setAnswer] = useState<Resolution | null>(null);
   const effectiveRef = useRef<string | null>(null);
+  // Streamed events are queued and revealed one at a time, so checkpoints land with
+  // a steady rhythm instead of arriving in bursts.
+  const queue = useRef<Stage[]>([]);
+  const draining = useRef(false);
+
+  function drain() {
+    if (draining.current) return;
+    draining.current = true;
+    const step = () => {
+      const next = queue.current.shift();
+      if (!next) { draining.current = false; return; }
+      setStages((s) => [...s, next]);
+      if (next.stage === 'classify') effectiveRef.current = (next.effective as string) ?? null;
+      if (next.stage === 'persist' && next.query) void closeLoop(next.query as QueryHint);
+      if (next.stage === 'done' || next.stage === 'error') setRunning(false);
+      window.setTimeout(step, next.stage === 'start' ? 220 : 480);
+    };
+    step();
+  }
 
   async function loadExample() {
     const r = await fetch(`${INGEST}/example`).then((x) => x.json());
@@ -29,6 +48,7 @@ export function Ingest() {
     setAnswer(null);
     setRunning(true);
     effectiveRef.current = null;
+    queue.current = [];
     try {
       const res = await fetch(`${INGEST}/ingest`, {
         method: 'POST',
@@ -46,17 +66,12 @@ export function Ingest() {
         const lines = buf.split('\n');
         buf = lines.pop() ?? '';
         for (const line of lines) {
-          if (!line.trim()) continue;
-          const e = JSON.parse(line) as Stage;
-          setStages((s) => [...s, e]);
-          if (e.stage === 'classify') effectiveRef.current = (e.effective as string) ?? null;
-          if (e.stage === 'persist' && e.query) await closeLoop(e.query as QueryHint);
+          if (line.trim()) { queue.current.push(JSON.parse(line) as Stage); drain(); }
         }
       }
     } catch (err) {
-      setStages((s) => [...s, { stage: 'error', message: String((err as Error).message) }]);
-    } finally {
-      setRunning(false);
+      queue.current.push({ stage: 'error', message: String((err as Error).message) });
+      drain();
     }
   }
 

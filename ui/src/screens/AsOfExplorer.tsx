@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { api, type ClauseOption, type Entity, type Resolution } from '../api';
-import { addDays, formatDate, today } from '../dates';
+import { addDays, clampDate, formatDate, today } from '../dates';
 import { TimeRibbon } from '../components/TimeRibbon';
 import { StatusBadge } from '../components/StatusBadge';
 
@@ -53,6 +53,8 @@ export function AsOfExplorer() {
     return { issued, effective, min: addDays(today(), -180), max: addDays(today(), 180) };
   }, [res]);
 
+  const setClamped = (d: string) => setAsOf(clampDate(d, domain.min, domain.max));
+
   return (
     <div className="stack">
       <div className="card card-pad">
@@ -79,11 +81,11 @@ export function AsOfExplorer() {
           <div className="field wide">
             <label htmlFor="asof">As of date</label>
             <div className="stepper">
-              <button className="step-btn" onClick={() => setAsOf(addDays(asOf, -1))} aria-label="Previous day">−1d</button>
+              <button className="step-btn" onClick={() => setClamped(addDays(asOf, -1))} aria-label="Previous day">−1d</button>
               <input id="asof" type="date" value={asOf} min={domain.min} max={domain.max}
-                onChange={(e) => e.target.value && setAsOf(e.target.value)} />
-              <button className="step-btn" onClick={() => setAsOf(addDays(asOf, 1))} aria-label="Next day">+1d</button>
-              <button className="step-btn today" onClick={() => setAsOf(today())}>Today</button>
+                onChange={(e) => e.target.value && setClamped(e.target.value)} />
+              <button className="step-btn" onClick={() => setClamped(addDays(asOf, 1))} aria-label="Next day">+1d</button>
+              <button className="step-btn today" onClick={() => setClamped(today())}>Today</button>
             </div>
           </div>
         </div>

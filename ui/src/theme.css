@@ -367,6 +367,12 @@ button { font-family: inherit; cursor: pointer; }
 .ops { display: grid; gap: 6px; }
 .op { font-size: 13px; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 
+/* each checkpoint slides + fades in as it lands; its dot pops */
+.pipe-row { animation: pipeIn .34s cubic-bezier(.2, .7, .3, 1) both; }
+@keyframes pipeIn { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+.pipe-dot { animation: dotPop .34s cubic-bezier(.2, .9, .3, 1.5) both; }
+@keyframes dotPop { 0% { transform: scale(0); } 60% { transform: scale(1.28); } 100% { transform: scale(1); } }
+
 /* ---- states ---- */
 .hint { font-size: 13px; color: var(--muted); }
 .error {
