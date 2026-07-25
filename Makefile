@@ -35,6 +35,9 @@ api-test:         ## run the ported-resolver tests
 api-dev:          ## start the API on :3001 (needs db-up + db-sync first)
 	cd api && npm start
 
+ingest-dev:       ## start the live-ingestion service on :8020 (FastAPI)
+	python -m uvicorn rbi.ingest.service:app --port 8020
+
 # --- quality ---
 test:             ## run the test suite
 	python -m pytest -q

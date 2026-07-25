@@ -3,14 +3,16 @@ import { AsOfExplorer } from './screens/AsOfExplorer';
 import { ChangeFeed } from './screens/ChangeFeed';
 import { ClauseTimeline } from './screens/ClauseTimeline';
 import { Comparison } from './screens/Comparison';
+import { Ingest } from './screens/Ingest';
 
-type Tab = 'explorer' | 'changes' | 'timeline' | 'comparison';
+type Tab = 'explorer' | 'changes' | 'timeline' | 'comparison' | 'ingest';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'explorer', label: 'As-of explorer' },
   { id: 'changes', label: 'Change feed' },
   { id: 'timeline', label: 'Clause timeline' },
   { id: 'comparison', label: 'Naive RAG vs full' },
+  { id: 'ingest', label: 'Ingest (live)' },
 ];
 
 function useTheme() {
@@ -60,6 +62,7 @@ export function App() {
         {tab === 'changes' && <ChangeFeed />}
         {tab === 'timeline' && <ClauseTimeline />}
         {tab === 'comparison' && <Comparison />}
+        {tab === 'ingest' && <Ingest />}
       </main>
     </div>
   );
