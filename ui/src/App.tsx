@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react';
 import { AsOfExplorer } from './screens/AsOfExplorer';
 import { ChangeFeed } from './screens/ChangeFeed';
 import { ClauseTimeline } from './screens/ClauseTimeline';
+import { Comparison } from './screens/Comparison';
 
-type Tab = 'explorer' | 'changes' | 'timeline';
+type Tab = 'explorer' | 'changes' | 'timeline' | 'comparison';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'explorer', label: 'As-of explorer' },
   { id: 'changes', label: 'Change feed' },
   { id: 'timeline', label: 'Clause timeline' },
+  { id: 'comparison', label: 'Naive RAG vs full' },
 ];
 
 function useTheme() {
@@ -57,6 +59,7 @@ export function App() {
         {tab === 'explorer' && <AsOfExplorer />}
         {tab === 'changes' && <ChangeFeed />}
         {tab === 'timeline' && <ClauseTimeline />}
+        {tab === 'comparison' && <Comparison />}
       </main>
     </div>
   );

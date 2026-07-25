@@ -305,6 +305,25 @@ button { font-family: inherit; cursor: pointer; }
 .tl-range .open { color: var(--now-ink); }
 .tl-src { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
 
+/* ---- comparison ---- */
+.badge.bad { background: color-mix(in srgb, var(--future) 16%, transparent); color: var(--future-ink); }
+.badge.bad .dot { background: var(--future); }
+.cmp { display: flex; flex-direction: column; gap: 14px; }
+.cmp-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.cmp-title { font-size: 14px; font-weight: 650; }
+.cmp-sub { font-weight: 500; font-size: 12px; color: var(--muted); margin-left: 4px; }
+.clause-text.naive { border-left-color: var(--future); }
+.err-list { display: grid; gap: 8px; }
+.err-chip {
+  font-size: 12.5px; line-height: 1.45; color: var(--future-ink);
+  background: var(--future-soft); border: 1px solid color-mix(in srgb, var(--future) 26%, transparent);
+  border-radius: 8px; padding: 8px 11px;
+}
+.err-chip b { font-weight: 700; }
+.cmp-verdict { font-size: 12.5px; line-height: 1.45; margin-top: auto; padding-top: 4px; }
+.cmp-verdict.good { color: var(--now-ink); }
+.cmp-verdict.bad { color: var(--muted); }
+
 /* ---- states ---- */
 .hint { font-size: 13px; color: var(--muted); }
 .error {

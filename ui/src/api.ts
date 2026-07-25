@@ -70,6 +70,32 @@ export interface TimelineVersion {
   supersededBy: string | null;
 }
 
+export interface GoldenScenario {
+  id: string;
+  category: string;
+  question: string;
+  entity: string;
+  family: string;
+  clause: string;
+  asOf: string;
+  expectedStatus: string;
+  note: string;
+}
+
+export interface NaiveAnswer {
+  text: string;
+  answerEntity: string | null;
+  effectiveDate: string | null;
+  issuedDate: string | null;
+  errors: { entity: boolean; temporal: boolean; shouldAbstain: boolean };
+}
+
+export interface CompareResult {
+  scenario: { entity: string; family: string; clause: string; asOf: string; question: string };
+  full: Resolution;
+  naive: NaiveAnswer | null;
+}
+
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(path);
   if (!res.ok) {
@@ -90,4 +116,10 @@ export const api = {
   changes: () => get<ChangeGroup[]>('/api/changes'),
   timeline: (family: string, entity: string, clause: string) =>
     get<TimelineVersion[]>(`/api/clauses/${family}/${entity}/${clause}/timeline`),
+  golden: () => get<GoldenScenario[]>('/api/golden'),
+  compare: (s: GoldenScenario) =>
+    get<CompareResult>(
+      `/api/compare?entity=${s.entity}&family=${s.family}&clause=${s.clause}` +
+        `&as_of=${s.asOf}&question=${encodeURIComponent(s.question)}`,
+    ),
 };

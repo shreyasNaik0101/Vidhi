@@ -10,6 +10,8 @@ import {
   clauseTimeline,
   changeFeed,
 } from './queries.js';
+import { embedQuery, nearestChunk } from './naive.js';
+import { loadComparableGolden } from './golden.js';
 
 const app = express();
 app.use(cors());
@@ -62,6 +64,46 @@ app.get('/api/clauses/:family/:entity/:clause/timeline', wrap(async (req, res) =
 // GET /api/changes  -> change feed (entity fan-out per substantive change)
 app.get('/api/changes', wrap(async (_req, res) => {
   res.json(await changeFeed(pool));
+}));
+
+// GET /api/golden  -> comparison-ready golden scenarios (entity + clause + date)
+app.get('/api/golden', wrap(async (_req, res) => {
+  res.json(loadComparableGolden());
+}));
+
+// GET /api/compare?entity=&family=&clause=&as_of=&question=
+// -> the same scenario answered by naive RAG (A) and the full system (C),
+//    with the naive answer's errors labelled.
+app.get('/api/compare', wrap(async (req, res) => {
+  const { entity, family = 'IRACP', clause, as_of: asOf, question } = req.query;
+  if (!entity || !clause || !asOf || !question) {
+    return res.status(400).json({ error: 'entity, clause, as_of and question are required' });
+  }
+
+  const versions = await loadClauseVersions(pool, {
+    mdFamily: family, entityCode: entity, clauseNumber: clause,
+  });
+  const full = resolve(versions, { mdFamily: family, entityCode: entity, clauseNumber: clause, asOf });
+
+  const chunk = await nearestChunk(pool, await embedQuery(question));
+  const naive = chunk
+    ? {
+        text: chunk.chunk_text,
+        answerEntity: chunk.entity_code,
+        effectiveDate: chunk.effective_date,
+        issuedDate: chunk.issued_date,
+        errors: {
+          // returned another entity's text
+          entity: Boolean(entity) && chunk.entity_code !== entity,
+          // returned text that is not yet in force on as_of
+          temporal: Boolean(chunk.effective_date) && asOf < chunk.effective_date,
+          // asserted an answer where the correct behaviour was to abstain
+          shouldAbstain: full.status !== 'in_force',
+        },
+      }
+    : null;
+
+  res.json({ scenario: { entity, family, clause, asOf, question }, full, naive });
 }));
 
 const PORT = Number(process.env.API_PORT) || 3001;
