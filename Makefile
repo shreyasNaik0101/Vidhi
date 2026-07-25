@@ -70,8 +70,11 @@ pipeline: fetch extract classify parse verify apply group  ## run all stages in 
 cost:             ## print LLM spend by stage and model
 	python -m rbi.llm.cost
 
-eval:             ## run the golden-set eval (not yet implemented)
-	@echo "TODO: src/rbi/eval — always report accuracy AND coverage"
+eval:             ## Baseline A (naive RAG) vs C (full system) on the golden set
+	python -m rbi.eval.cli compare --model gemma4:latest
+
+eval-index:       ## (re)build the naive-RAG pgvector index
+	python -m rbi.eval.cli build-naive-index
 
 aws-destroy:      ## tear down all AWS resources
 	@echo "TODO: infra — cdk destroy"

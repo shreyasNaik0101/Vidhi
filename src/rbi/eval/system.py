@@ -61,10 +61,15 @@ class FullSystem:
                 self.versions, md_family=q.md_family, entity_type_code=q.entity_type,
                 clause_number=q.clause, as_of=q.as_of,
             )
+            in_force = r.status == "in_force"
             return Prediction(
                 status=r.status,
                 text=r.text,
-                clause=q.clause if r.status == "in_force" else None,
+                clause=q.clause if in_force else None,
+                # the filtered system only ever returns the asked entity's in-force text
+                answer_entity=q.entity_type if in_force else None,
+                answer_valid_from=r.valid_from if in_force else None,
+                answer_valid_to=r.valid_to if in_force else None,
             )
         if q.category == "cross_entity":
             clause = self._equivalent(q.reference_entity, q.reference_clause, q.entity_type)

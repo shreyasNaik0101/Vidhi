@@ -9,6 +9,7 @@ filter exists precisely to prevent returning the wrong entity's or wrong era's t
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from datetime import date
 
 from .golden import GoldenQuestion
 
@@ -23,6 +24,10 @@ class Prediction:
     clause: str | None = None
     entities: list[str] = field(default_factory=list)
     note: str = ""
+    # provenance of a committed answer — lets error rates be measured for any baseline
+    answer_entity: str | None = None
+    answer_valid_from: date | None = None
+    answer_valid_to: date | None = None
 
 
 def committed(p: Prediction) -> bool:
@@ -49,13 +54,27 @@ def is_correct(q: GoldenQuestion, p: Prediction) -> bool:
 
 
 def is_entity_error(q: GoldenQuestion, p: Prediction) -> bool:
-    """Returned another entity's clause text when asked with a wrong-entity number."""
-    return q.category == "entity_trap" and p.status == "in_force"
+    """A committed answer whose text belongs to a different entity than asked."""
+    if not committed(p) or not q.entity_type:
+        return False
+    if p.answer_entity is not None:
+        return p.answer_entity != q.entity_type
+    # fallback for baselines that don't report provenance: an in-force answer to an
+    # entity-trap question can only be another entity's text.
+    return q.category == "entity_trap"
 
 
 def is_temporal_error(q: GoldenQuestion, p: Prediction) -> bool:
-    """Returned text that is not in force on as_of."""
-    return q.category == "temporal_trap" and p.status == "in_force"
+    """A committed answer whose text was not in force on as_of."""
+    if not committed(p) or q.as_of is None:
+        return False
+    if p.answer_valid_from is not None:
+        if q.as_of < p.answer_valid_from:
+            return True
+        if p.answer_valid_to is not None and q.as_of >= p.answer_valid_to:
+            return True
+        return False
+    return q.category == "temporal_trap"
 
 
 @dataclass
