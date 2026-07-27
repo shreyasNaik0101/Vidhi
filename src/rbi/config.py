@@ -11,7 +11,8 @@ load_dotenv()
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = REPO_ROOT / "data"
-SAMPLES_DIR = DATA_DIR / "samples"
+SAMPLES_DIR = DATA_DIR / "samples"       # the two verified real PDFs
+CORPUS_DIR = DATA_DIR / "corpus"         # synthetic-but-realistic text amendments
 RAW_DIR = DATA_DIR / "raw"
 GOLDEN_DIR = DATA_DIR / "golden"
 

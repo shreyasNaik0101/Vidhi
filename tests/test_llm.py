@@ -73,5 +73,7 @@ def test_verify_escalates_on_hard():
 
 
 def test_local_tasks_route_to_ollama():
-    assert route("parse") == "qwen3:8b"
-    assert route("classify") == "gemma3:4b"
+    # routes to whatever the local models are configured to (env can override the spec defaults)
+    from rbi.config import config
+    assert route("parse") == config.ollama_model_parse
+    assert route("classify") == config.ollama_model_extract

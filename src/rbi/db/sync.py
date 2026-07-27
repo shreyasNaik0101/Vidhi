@@ -7,13 +7,14 @@ members link correctly without brittle SQL subqueries.
 """
 from __future__ import annotations
 
+import hashlib
 from dataclasses import dataclass
 from pathlib import Path
 
 from ..apply.build import assert_no_overlap, build_timeline
 from ..apply.models import ClauseVersion
 from ..classify.rules import DocumentMeta, classify_text
-from ..config import SAMPLES_DIR, config
+from ..config import CORPUS_DIR, SAMPLES_DIR, config
 from ..extract.normalise import normalise
 from ..extract.pdf import extract_pdf, sha256_file
 from ..group.build import group_ops
@@ -119,14 +120,12 @@ def sync_samples(*, model: str | None = None, database_url: str | None = None) -
     model = model or config.ollama_model_parse
     docs: list[DocBundle] = []
     entries, ops = [], []
-    for p in sorted(Path(SAMPLES_DIR).glob("*.pdf")):
-        raw = extract_pdf(p)
-        text = normalise(raw)
+
+    def take(text: str, source_url: str, sha: str) -> None:
         meta = classify_text(text)
         result = parse_document(text, model=model)
         docs.append(DocBundle(meta=meta, operations=result.operations,
-                              source_url=f"file://data/samples/{p.name}",
-                              sha256=sha256_file(p), raw_text=text))
+                              source_url=source_url, sha256=sha, raw_text=text))
         entries.append((meta, result.operations))
         for op in result.operations:
             if op.operation == "insert":
@@ -137,6 +136,17 @@ def sync_samples(*, model: str | None = None, database_url: str | None = None) -
                     text=" ".join(nc.text for nc in op.new_clauses),
                     clause_numbers=op.clause_numbers))
 
+    # the two real PDFs
+    for p in sorted(Path(SAMPLES_DIR).glob("*.pdf")):
+        take(normalise(extract_pdf(p)), f"file://data/samples/{p.name}", sha256_file(p))
+    # synthetic text amendments (substitute, extra entities) — see data/corpus/README
+    for p in sorted(Path(CORPUS_DIR).glob("*.txt")):
+        raw = p.read_text(encoding="utf-8")
+        take(normalise(raw), f"file://data/corpus/{p.name}",
+             hashlib.sha256(raw.encode("utf-8")).hexdigest())
+
+    # build_timeline sees ALL documents in effective-date order, so substitute/omit
+    # correctly close prior versions (that's how 68C gets two versions).
     versions = build_timeline(entries)
     groups = group_ops(ops)
     return persist(docs, versions, groups, database_url=database_url)

@@ -72,6 +72,28 @@ def persist_one(doc: DocBundle, versions: list[ClauseVersion], *, database_url=N
                      v.valid_from, v.valid_to, op_id_by_ref.get(v.created_by_ref)),
                 )
                 clauses += 1
+
+            # A substitute/omit revises a clause created by an EARLIER document, so it
+            # lives in the DB and build_timeline (which sees only this doc) couldn't close
+            # it. Close the previously-in-force version here: valid_to = this effective
+            # date. For substitute the new version was just inserted (valid_from = eff),
+            # and `valid_from < eff` excludes it, so only the prior version is closed.
+            eff = m.effective_date or m.issued_date
+            eid = entity_ids.get(m.entity_type_code)
+            for op in doc.operations:
+                if op.operation not in ("substitute", "omit"):
+                    continue
+                numbers = ([nc.clause_number for nc in op.new_clauses]
+                           or op.clause_numbers
+                           or ([op.target_anchor] if op.target_anchor else []))
+                op_id = op_id_by_ref.get(f"{ref}#seq{op.seq}")
+                for number in numbers:
+                    cur.execute(
+                        """UPDATE clause SET valid_to = %s, superseded_by_op_id = %s
+                           WHERE md_family = %s AND entity_type_id = %s
+                             AND clause_number = %s AND valid_to IS NULL AND valid_from < %s""",
+                        (eff, op_id, m.md_family, eid, number, eff),
+                    )
         conn.commit()
 
     return {"rbi_ref": ref, "operations": len(doc.operations), "clauses": clauses}
