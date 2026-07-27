@@ -46,8 +46,8 @@ lint:
 	ruff check src tests
 
 # --- pipeline stages (§6) ---
-fetch:            ## [stage 1] scrape RBI notifications (not yet implemented)
-	@echo "TODO: src/rbi/fetch — respect robots.txt, 1 req / 2s"
+fetch:            ## [stage 1] scrape RBI notifications (respectful; --dry-run to preview)
+	python -m rbi.fetch.cli --limit 5 --dry-run
 
 extract:          ## [stage 2-3] extract + normalise sample PDFs
 	python -m rbi.extract.cli --limit 2
