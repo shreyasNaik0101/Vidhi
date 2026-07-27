@@ -482,18 +482,16 @@ Vite + React + TypeScript. Backend API in `api/` (Node + Express).
 
 ### Design brief
 
-Read `/mnt/skills/public/frontend-design/SKILL.md` before writing any UI code and follow its
-process — brainstorm a token system, critique it against the defaults it warns about, then build.
+Start from a small, deliberate token system — brainstorm the palette and type scale, critique it
+against generic defaults, then build.
 
-Direction for this brief: the subject is **regulatory time**, so make time the spatial spine of
-the interface. The signature element is a persistent horizontal time ribbon showing where the
-selected `as_of` date sits relative to issue and effective dates — always visible, the thing the
-whole UI orbits.
+Direction: the subject is **regulatory time**, so make time the spatial spine of the interface.
+The signature element is a persistent horizontal time ribbon showing where the selected `as_of`
+date sits relative to issue and effective dates — always visible, the thing the whole UI orbits.
 
-Do not reach for the broadsheet/hairline-rules treatment that regulatory subjects invite; the
-skill flags it as an AI default. Avoid the cream-plus-serif-plus-terracotta palette and the
-near-black-plus-acid-green palette for the same reason. Pick a palette where "in force" and "not
-yet in force" are legible at a glance without relying on red/green alone.
+Avoid the treatments that regulatory subjects invite by default — broadsheet/hairline-rules, the
+cream-plus-serif-plus-terracotta palette, the near-black-plus-acid-green palette. Pick a palette
+where "in force" and "not yet in force" are legible at a glance without relying on red/green alone.
 
 ### Screens
 
