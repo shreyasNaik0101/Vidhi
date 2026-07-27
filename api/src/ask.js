@@ -35,22 +35,28 @@ export function extractEntity(q) {
   return null;
 }
 
+const MON = (w) => MONTHS[w.slice(0, 3)];
+
 export function extractDate(q) {
   const s = q.toLowerCase();
   let m;
-  if (/\b(today|now|currently|right now)\b/.test(s)) return new Date().toISOString().slice(0, 10);
-  if ((m = s.match(/\b(\d{4})-(\d{2})-(\d{2})\b/))) return `${m[1]}-${m[2]}-${m[3]}`;
-  if ((m = s.match(/\b([a-z]{3,9})\s+(\d{1,2}),?\s+(\d{4})\b/)) && MONTHS[m[1].slice(0, 3)])
-    return iso(+m[3], MONTHS[m[1].slice(0, 3)], +m[2]);            // Month DD, YYYY
-  if ((m = s.match(/\b(\d{1,2})\s+([a-z]{3,9})\s+(\d{4})\b/)) && MONTHS[m[2].slice(0, 3)])
-    return iso(+m[3], MONTHS[m[2].slice(0, 3)], +m[1]);            // DD Month YYYY
-  if ((m = s.match(/\b([a-z]{3,9})\s+(\d{4})\b/)) && MONTHS[m[1].slice(0, 3)])
-    return iso(+m[2], MONTHS[m[1].slice(0, 3)], 1);                // Month YYYY -> 1st
+  if (/\b(today|now|currently|right now|at present|as of today|present)\b/.test(s))
+    return new Date().toISOString().slice(0, 10);
+  if ((m = s.match(/\b(\d{4})[-/](\d{1,2})[-/](\d{1,2})\b/)))              // 2026-10-01 or 2026/10/1
+    return iso(+m[1], +m[2], +m[3]);
+  if ((m = s.match(/\b([a-z]{3,9})\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})\b/)) && MON(m[1]))
+    return iso(+m[3], MON(m[1]), +m[2]);                                   // Month DD[th], YYYY
+  if ((m = s.match(/\b(\d{1,2})(?:st|nd|rd|th)?\s+(?:of\s+)?([a-z]{3,9})\s+(\d{4})\b/)) && MON(m[2]))
+    return iso(+m[3], MON(m[2]), +m[1]);                                   // DD[th] [of] Month YYYY
+  if ((m = s.match(/\b([a-z]{3,9})\s+(\d{4})\b/)) && MON(m[1]))
+    return iso(+m[2], MON(m[1]), 1);                                       // Month YYYY -> 1st
   return null;
 }
 
 export function extractClause(q) {
-  const m = q.match(/\bclause\s+(\d{1,3}[A-Za-z]?)\b/i) || q.match(/\b(\d{2,3}[A-Z])\b/);
+  // "clause 68C" / "para 68C" / bare "68C" (case-insensitive)
+  const m = q.match(/\b(?:clause|para(?:graph)?)\s+(\d{1,3}[A-Za-z]?)\b/i)
+    || q.match(/\b(\d{2,3}[A-Za-z])\b/);
   return m ? m[1].toUpperCase() : null;
 }
 
