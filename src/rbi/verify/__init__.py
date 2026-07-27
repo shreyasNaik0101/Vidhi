@@ -1,4 +1,4 @@
-"""Stage 6: verify (CLAUDE.md §6.5) — an independent second check on each parse.
+"""Stage 6: verify (PROJECT_SPEC.md §6.5) — an independent second check on each parse.
 
 The parser's own deterministic guards (verbatim evidence span, clause extraction)
 run first. This stage adds a *second opinion* on the borderline cases: only parses

@@ -2,7 +2,7 @@
 
 The model tells us which clause numbers an operation touches; this pulls each
 clause's exact text out of the source, so the stored body is verbatim by
-construction (CLAUDE.md §13: prefer deterministic checks over model calls).
+construction (PROJECT_SPEC.md §13: prefer deterministic checks over model calls).
 """
 from __future__ import annotations
 

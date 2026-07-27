@@ -1,4 +1,4 @@
-"""Raw text extraction with pymupdf (CLAUDE.md §6.2)."""
+"""Raw text extraction with pymupdf (PROJECT_SPEC.md §6.2)."""
 from __future__ import annotations
 
 import hashlib

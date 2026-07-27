@@ -1,4 +1,4 @@
-"""Deterministic guards on the model's JSON (CLAUDE.md §6.4, §13).
+"""Deterministic guards on the model's JSON (PROJECT_SPEC.md §6.4, §13).
 
 Order matters:
   1. strip markdown fences the model may add despite instructions

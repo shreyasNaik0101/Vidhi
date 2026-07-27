@@ -1,4 +1,4 @@
-"""Regex-first document classification (CLAUDE.md §6.3).
+"""Regex-first document classification (PROJECT_SPEC.md §6.3).
 
 Extracts the fields of a `document` row from normalised text. Regex handles the
 sample docs entirely; `missing` lists any required field a regex could not fill,

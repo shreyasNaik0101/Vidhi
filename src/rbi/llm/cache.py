@@ -1,4 +1,4 @@
-"""Response cache (CLAUDE.md §7). Key = sha256(model + prompt + params).
+"""Response cache (PROJECT_SPEC.md §7). Key = sha256(model + prompt + params).
 
 Check before every call, no exceptions. A warm cache makes a pipeline re-run ~free.
 """

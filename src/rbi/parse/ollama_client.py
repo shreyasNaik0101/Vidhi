@@ -1,8 +1,8 @@
-"""Ollama client for local models — always through the cache and ledger (CLAUDE.md §7).
+"""Ollama client for local models — always through the cache and ledger (PROJECT_SPEC.md §7).
 
 Local models are free, so no spend guard is needed, but calls are still cached
 (a warm re-run costs ~nothing) and recorded (call counts feed the cost table).
-num_ctx is set explicitly — never rely on Ollama's default (CLAUDE.md §3).
+num_ctx is set explicitly — never rely on Ollama's default (PROJECT_SPEC.md §3).
 """
 from __future__ import annotations
 

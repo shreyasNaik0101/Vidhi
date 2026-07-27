@@ -1,4 +1,4 @@
-"""The as-of resolver (CLAUDE.md §5). Entity + validity filter, then the answer.
+"""The as-of resolver (PROJECT_SPEC.md §5). Entity + validity filter, then the answer.
 
 This is the query that defines the product. It never guesses: if nothing is in
 force on `as_of`, it abstains with a status that says *why* (not yet in force /

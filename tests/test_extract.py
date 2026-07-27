@@ -1,4 +1,4 @@
-"""One test per documented extraction quirk (CLAUDE.md §6.2), against the two sample PDFs."""
+"""One test per documented extraction quirk (PROJECT_SPEC.md §6.2), against the two sample PDFs."""
 from __future__ import annotations
 
 import re
@@ -83,7 +83,7 @@ def test_effective_date_present(texts):
 
 
 def test_rrb_lab_wording_difference_preserved(texts):
-    # The single substantive difference the verifier agent exists for (CLAUDE.md §2).
+    # The single substantive difference the verifier agent exists for (PROJECT_SPEC.md §2).
     assert "a Specified Non-Financial Asset (SNFA)," in texts["RBI/2026-27/201"]
     assert "an SNFA," in texts["RBI/2026-27/202"]
 

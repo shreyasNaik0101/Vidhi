@@ -1,4 +1,4 @@
-"""Materialise clause versions from parsed operations (CLAUDE.md §6.7).
+"""Materialise clause versions from parsed operations (PROJECT_SPEC.md §6.7).
 
   insert     -> new version, valid_from = effective_date, valid_to = None
   substitute -> close the prior open version (valid_to = effective_date), add new

@@ -1,4 +1,4 @@
-"""Extract stage CLI. `python -m rbi.extract.cli --limit 2 --dry-run` (CLAUDE.md §13)."""
+"""Extract stage CLI. `python -m rbi.extract.cli --limit 2 --dry-run` (PROJECT_SPEC.md §13)."""
 from __future__ import annotations
 
 from pathlib import Path

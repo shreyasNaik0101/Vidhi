@@ -1,7 +1,7 @@
 # Golden set — hand-labelled ground truth
 
 `questions.jsonl` is **hand-authored** and **committed**. Never regenerate it
-(CLAUDE.md §13) — every accuracy number in the project depends on it staying stable.
+(PROJECT_SPEC.md §13) — every accuracy number in the project depends on it staying stable.
 
 48 questions, 8 per category:
 

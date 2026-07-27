@@ -1,4 +1,4 @@
-"""Golden question schema + loader (CLAUDE.md §9)."""
+"""Golden question schema + loader (PROJECT_SPEC.md §9)."""
 from __future__ import annotations
 
 import json

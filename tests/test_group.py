@@ -23,7 +23,7 @@ ISSUED = date(2026, 7, 16)
 EFFECTIVE = date(2026, 10, 1)
 
 # Full clause text; the ONLY difference is 'a Specified Non-Financial Asset (SNFA),'
-# vs 'an SNFA,' — the documented 0.957-similarity pair (CLAUDE.md §2).
+# vs 'an SNFA,' — the documented 0.957-similarity pair (PROJECT_SPEC.md §2).
 _COMMON_TAIL = (
     " shall not be recognised as income upon acquisition of the SNFA. Where such income "
     "has been recognised in respect of any SNFA outstanding in the books of a bank as on "

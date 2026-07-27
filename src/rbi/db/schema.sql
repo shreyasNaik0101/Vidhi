@@ -1,4 +1,4 @@
--- RBI Regulatory Timeline Engine — schema (CLAUDE.md §5)
+-- RBI Regulatory Timeline Engine — schema (PROJECT_SPEC.md §5)
 -- Postgres 16 + pgvector. Runs at container init.
 
 CREATE EXTENSION IF NOT EXISTS vector;

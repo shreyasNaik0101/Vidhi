@@ -1,4 +1,4 @@
-"""Model router (CLAUDE.md §7). route(task, difficulty) -> model.
+"""Model router (PROJECT_SPEC.md §7). route(task, difficulty) -> model.
 
 Escalation is explicit and logged, never implicit — so the accuracy-vs-cost table
 can be built from real routing decisions.

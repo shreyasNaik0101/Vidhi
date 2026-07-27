@@ -1,4 +1,4 @@
-"""Fetch stage CLI. `python -m rbi.fetch.cli --limit 5 --dry-run` (CLAUDE.md §13).
+"""Fetch stage CLI. `python -m rbi.fetch.cli --limit 5 --dry-run` (PROJECT_SPEC.md §13).
 
 --dry-run lists what it would download without fetching PDFs. Live fetching hits the
 real RBI site; the parsing/dedup logic is covered by tests against a fixture.

@@ -1,4 +1,4 @@
-"""Cluster operations into change groups (CLAUDE.md §6.7).
+"""Cluster operations into change groups (PROJECT_SPEC.md §6.7).
 
 Within a single issued_date, connect operations whose new_text similarity clears
 a threshold, then take connected components as groups. Similarity defaults to the

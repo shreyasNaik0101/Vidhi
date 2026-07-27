@@ -1,4 +1,4 @@
-"""Cost ledger + spend cap (CLAUDE.md §7).
+"""Cost ledger + spend cap (PROJECT_SPEC.md §7).
 
 Every paid call records a row here. Before a paid call, `guard()` sums spend to date
 and refuses if the call would breach MAX_SPEND_USD. AWS will not protect you — this does.

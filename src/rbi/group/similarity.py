@@ -1,4 +1,4 @@
-"""Similarity measures for grouping (CLAUDE.md §6.7).
+"""Similarity measures for grouping (PROJECT_SPEC.md §6.7).
 
 word_similarity is deterministic and needs no model — it reproduces the ~0.957
 reference between the RRB and LAB SNFA clauses and is the stored score. cosine is

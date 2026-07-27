@@ -1,4 +1,4 @@
-"""Token pricing. Rates come from pricing.json, never hardcoded constants (CLAUDE.md §7)."""
+"""Token pricing. Rates come from pricing.json, never hardcoded constants (PROJECT_SPEC.md §7)."""
 from __future__ import annotations
 
 import json

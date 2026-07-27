@@ -1,4 +1,4 @@
-"""Domain types for change grouping (CLAUDE.md §5, §6.7)."""
+"""Domain types for change grouping (PROJECT_SPEC.md §5, §6.7)."""
 from __future__ import annotations
 
 from dataclasses import dataclass, field

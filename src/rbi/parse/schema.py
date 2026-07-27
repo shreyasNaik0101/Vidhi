@@ -1,4 +1,4 @@
-"""Output schema for parsed amendment operations (CLAUDE.md §6.4).
+"""Output schema for parsed amendment operations (PROJECT_SPEC.md §6.4).
 
 The model emits STRUCTURE only — including `clause_numbers`, not clause bodies.
 `new_clauses` (number + verbatim text) is filled deterministically in postprocess

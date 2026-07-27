@@ -1,6 +1,6 @@
 """Stage 1: fetch. Scrape the RBI notifications list and download amendment PDFs.
 
-Respectful by construction (CLAUDE.md §6.1): one request per FETCH_DELAY_SECONDS,
+Respectful by construction (PROJECT_SPEC.md §6.1): one request per FETCH_DELAY_SECONDS,
 a real User-Agent, robots.txt honoured, exponential backoff, and sha256 dedup so a
 document is never downloaded twice. Parsing and dedup are pure/testable; the HTTP
 getter is injectable so the whole stage runs against a fixture with no network.

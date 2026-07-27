@@ -1,4 +1,4 @@
-"""Stage 5: parse. Amendment operative section -> structured operations (CLAUDE.md §6.4).
+"""Stage 5: parse. Amendment operative section -> structured operations (PROJECT_SPEC.md §6.4).
 
 The core local-LLM step. Deterministic guards live in postprocess (verbatim
 evidence-span check, confidence gating, unresolved path) — these catch more

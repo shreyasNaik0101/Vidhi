@@ -1,7 +1,7 @@
 """Fetch stage — notification parsing, rate limiting, robots, and sha256 dedup.
 
 No network: the HTTP getter is injected with fixture bytes, so the whole stage runs
-deterministically offline (CLAUDE.md §13).
+deterministically offline (PROJECT_SPEC.md §13).
 """
 from __future__ import annotations
 

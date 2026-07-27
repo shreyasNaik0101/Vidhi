@@ -109,7 +109,7 @@ construction. Evidence spans are validated by substring check — a cheap halluc
 - **Store:** Postgres 16 + pgvector in Docker (never RDS — cost control is a functional requirement)
 - **API:** Node + Express (`api/`) — *chosen over the brief's FastAPI by preference; the pipeline
   stays in Python and fills the DB, the API only reads, and the as-of resolver is ported to JS with
-  its own tests so both agree.* See `CLAUDE.md §10`.
+  its own tests so both agree.* See `PROJECT_SPEC.md §10`.
 - **UI:** React + Vite + TypeScript (`ui/`) — 4 screens, time as the spatial spine
 
 ## Quick start
@@ -165,4 +165,4 @@ Postgres or Ollama is unavailable.
   is the proper fix.
 - **AWS/CDK infra** (S3, Lambda, Step Functions) from the brief is not built.
 
-See `CLAUDE.md` for the full project brief and design rationale.
+See `PROJECT_SPEC.md` for the full project brief and design rationale.

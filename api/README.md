@@ -3,7 +3,7 @@
 A thin **read** API over the clause timeline in Postgres. The Python pipeline fills
 the database (`make db-sync`); this server only queries it.
 
-> Stack note: the spec (CLAUDE.md §10) named FastAPI. We chose Node/Express by
+> Stack note: the spec (PROJECT_SPEC.md §10) named FastAPI. We chose Node/Express by
 > preference. The one piece of real logic — the as-of resolver — is **ported to JS
 > and tested** (`test/resolve.test.js`), mirroring the Python `tests/test_apply.py`,
 > so both languages agree on in-force / abstention decisions.

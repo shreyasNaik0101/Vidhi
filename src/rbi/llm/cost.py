@@ -1,4 +1,4 @@
-"""`make cost` — print spend by stage and by model from the ledger (CLAUDE.md §7)."""
+"""`make cost` — print spend by stage and by model from the ledger (PROJECT_SPEC.md §7)."""
 from __future__ import annotations
 
 from .ledger import CostLedger

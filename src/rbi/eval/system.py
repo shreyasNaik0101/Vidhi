@@ -1,4 +1,4 @@
-"""Baseline C — the full system under test (CLAUDE.md §9).
+"""Baseline C — the full system under test (PROJECT_SPEC.md §9).
 
 Ingests the sample corpus (parse via warm cache), builds the clause timeline and
 change groups, and answers golden questions through the entity+validity resolver,

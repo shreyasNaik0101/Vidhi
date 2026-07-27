@@ -1,7 +1,7 @@
 """Read path: load clause versions from Postgres, resolve as-of in Python.
 
 The coarse entity+family+clause filter runs in SQL (the query that defines the
-product, CLAUDE.md §5); the temporal logic reuses the tested apply.resolve.resolve
+product, PROJECT_SPEC.md §5); the temporal logic reuses the tested apply.resolve.resolve
 so there is one source of truth for in-force / not-yet / no-provision.
 """
 from __future__ import annotations

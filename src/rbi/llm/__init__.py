@@ -1,6 +1,6 @@
 """LLM plumbing: response cache, cost ledger, router.
 
-Built before any model call (CLAUDE.md §7) — this is what keeps the project under $20.
+Built before any model call (PROJECT_SPEC.md §7) — this is what keeps the project under $20.
 Nothing here calls a model; these are the guardrails a caller must go through.
 """
 from .cache import ResponseCache

@@ -1,4 +1,4 @@
-"""Prompt for the parse stage (CLAUDE.md §6.4). JSON only, SHORT output.
+"""Prompt for the parse stage (PROJECT_SPEC.md §6.4). JSON only, SHORT output.
 
 The model must NOT reproduce clause text — only list clause_numbers. Long output
 dominates CPU latency and risks truncation; the body is extracted deterministically.

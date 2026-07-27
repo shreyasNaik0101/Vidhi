@@ -1,4 +1,4 @@
-"""Normalisation of extracted PDF text (CLAUDE.md §6.2).
+"""Normalisation of extracted PDF text (PROJECT_SPEC.md §6.2).
 
 Five verified quirks in the sample PDFs, each handled here and covered by a test:
 
@@ -9,7 +9,7 @@ Five verified quirks in the sample PDFs, each handled here and covered by a test
   5. Hard line wraps mid-sentence — reflow, breaking only on structural starts.
 
 Note: real RBI text contains typos ('in, in exercise', 'modifies'). We do NOT fix
-those — downstream matching must tolerate them (CLAUDE.md §13).
+those — downstream matching must tolerate them (PROJECT_SPEC.md §13).
 """
 from __future__ import annotations
 

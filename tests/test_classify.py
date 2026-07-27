@@ -1,4 +1,4 @@
-"""Classify stage — exact expected metadata for both sample docs (CLAUDE.md §6.3)."""
+"""Classify stage — exact expected metadata for both sample docs (PROJECT_SPEC.md §6.3)."""
 from __future__ import annotations
 
 import re

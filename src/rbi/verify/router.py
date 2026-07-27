@@ -1,4 +1,4 @@
-"""Routing: which parsed operations get an independent second check (CLAUDE.md §6.5).
+"""Routing: which parsed operations get an independent second check (PROJECT_SPEC.md §6.5).
 
 Only the uncertain middle band (0.5–0.9) is routed, plus a small random sample of
 high-confidence ops for calibration. Anything already 'unresolved' is skipped —

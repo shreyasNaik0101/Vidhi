@@ -1,4 +1,4 @@
-# Postgres + pgvector only. No RDS, no cloud DB (CLAUDE.md §3).
+# Postgres + pgvector only. No RDS, no cloud DB (PROJECT_SPEC.md §3).
 services:
   db:
     image: pgvector/pgvector:pg16

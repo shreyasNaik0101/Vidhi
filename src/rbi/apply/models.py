@@ -1,4 +1,4 @@
-"""Domain types for the clause timeline (CLAUDE.md §5, §6.6)."""
+"""Domain types for the clause timeline (PROJECT_SPEC.md §5, §6.6)."""
 from __future__ import annotations
 
 from dataclasses import dataclass, field

@@ -1,4 +1,4 @@
-# RBI Regulatory Timeline Engine — every stage has a target (CLAUDE.md §4).
+# RBI Regulatory Timeline Engine — every stage has a target (PROJECT_SPEC.md §4).
 # POSIX make. On Windows, run targets under Git Bash or invoke the python commands directly.
 
 .PHONY: install db-up db-down db-logs test lint extract cost \

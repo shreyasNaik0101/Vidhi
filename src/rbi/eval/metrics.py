@@ -1,4 +1,4 @@
-"""Scoring for the golden set (CLAUDE.md §9).
+"""Scoring for the golden set (PROJECT_SPEC.md §9).
 
 Always report accuracy AND coverage together. A system that abstains on everything
 scores 100% accuracy and is useless — so coverage is measured over *answerable*

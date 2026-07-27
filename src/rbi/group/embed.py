@@ -1,4 +1,4 @@
-"""Local embeddings via Ollama (CLAUDE.md §6.7). Free; cached; through the ledger.
+"""Local embeddings via Ollama (PROJECT_SPEC.md §6.7). Free; cached; through the ledger.
 
 Precompute one vector per operation, then cluster on cosine. Falls back cleanly:
 callers that want a purely deterministic run use word_similarity instead.

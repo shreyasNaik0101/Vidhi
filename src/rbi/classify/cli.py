@@ -1,4 +1,4 @@
-"""Classify stage CLI. `python -m rbi.classify.cli --limit 2` (CLAUDE.md §13).
+"""Classify stage CLI. `python -m rbi.classify.cli --limit 2` (PROJECT_SPEC.md §13).
 
 Logs the regex-hit rate — the share of docs classified with no LLM fallback.
 """

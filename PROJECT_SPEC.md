@@ -1,6 +1,6 @@
 # RBI Regulatory Timeline Engine — Project Spec
 
-Paste this as `CLAUDE.md` in the repo root. It is the standing brief for the project.
+The standing brief for this project — design, scope, and the verified ground truth.
 
 ---
 
@@ -87,7 +87,7 @@ versions for other entity types. Confirming the batch size is a Week 1 task.
 
 ```
 rbi-timeline/
-├── CLAUDE.md
+├── PROJECT_SPEC.md
 ├── Makefile                  # every stage has a target
 ├── docker-compose.yml        # postgres + pgvector only
 ├── pyproject.toml

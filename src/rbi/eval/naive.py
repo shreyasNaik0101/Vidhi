@@ -1,4 +1,4 @@
-"""Baseline A — naive RAG (CLAUDE.md §9).
+"""Baseline A — naive RAG (PROJECT_SPEC.md §9).
 
 Every document chunked into ONE pgvector index. Retrieval is pure vector
 similarity: no entity filter, no date filter. This is what a normal project
