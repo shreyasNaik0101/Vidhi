@@ -61,13 +61,13 @@ def test_no_temporal_error_when_abstaining():
     assert not is_temporal_error(_q(as_of=date(2026, 9, 30)), Prediction(status="not_yet_in_force"))
 
 
-# --- live: build index + answer (skips without DB + embed model) ---
-def _db_ok() -> bool:
+# --- live: seed a doc, build the index, answer (self-contained; runs on the test DB) ---
+def _db_reachable() -> bool:
     try:
         from rbi.db.conn import connect
         with connect() as conn, conn.cursor() as cur:
-            cur.execute("SELECT count(*) FROM document")
-            return cur.fetchone()[0] > 0
+            cur.execute("SELECT 1")
+        return True
     except Exception:
         return False
 
@@ -81,19 +81,37 @@ def _embed_ok() -> bool:
         return False
 
 
-@pytest.mark.skipif(not (_db_ok() and _embed_ok()), reason="needs DB with docs + embed model")
 def test_naive_rag_answers_with_provenance():
+    # runtime guard (the test DB is provisioned by the session fixture, after collection)
+    if not (_db_reachable() and _embed_ok()):
+        pytest.skip("needs DB + embed model")
+
+    from rbi.apply.build import build_timeline
+    from rbi.classify.rules import DocumentMeta
     from rbi.db.conn import connect
+    from rbi.db.sync import DocBundle, persist
     from rbi.eval.naive import NaiveRAG, build_index
+    from rbi.group.build import group_ops
+    from rbi.parse.schema import NewClause, Operation
+
+    meta = DocumentMeta(rbi_ref="TEST/RRB", title="RRB IRACP", doc_type="amendment",
+                        md_family="IRACP", entity_type_code="RRB",
+                        issued_date=date(2026, 7, 16), effective_date=date(2026, 10, 1))
+    op = Operation(seq=1, operation="insert", target_chapter="V", clause_numbers=["68C"],
+                   new_clauses=[NewClause(clause_number="68C",
+                       text="Any accrued but unrealised interest on an acquired SNFA "
+                            "shall not be recognised as income.")],
+                   evidence_span="x", confidence=1.0)
+    bundle = DocBundle(meta=meta, operations=[op], source_url="test://", sha256="0" * 64,
+                       raw_text="accrued but unrealised interest on an acquired SNFA")
+    persist([bundle], build_timeline([(meta, [op])]), group_ops([]))  # into rbi_test
 
     with connect() as conn:
         n = build_index(conn)
         assert n > 0
-        rag = NaiveRAG(conn=conn)
-        q = GoldenQuestion(id="g001", category="lookup",
-                           question="How is accrued but unrealised interest on an acquired SNFA treated?",
-                           entity_type="RRB", clause="68C", as_of=date(2026, 10, 2),
-                           expected_status="in_force")
-        p = rag.answer(q)
+        p = NaiveRAG(conn=conn).answer(GoldenQuestion(
+            id="g001", category="lookup",
+            question="How is accrued interest on an acquired SNFA treated?",
+            entity_type="RRB", clause="68C", as_of=date(2026, 10, 2), expected_status="in_force"))
     assert p.status == "in_force" and p.text          # naive RAG always commits
-    assert p.answer_entity in {"RRB", "LAB"}           # from whichever chunk was nearest
+    assert p.answer_entity == "RRB"
