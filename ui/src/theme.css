@@ -350,6 +350,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .pipe-dot.parsing { background: var(--future); box-shadow: 0 0 0 1px var(--future); }
 .pipe-dot.error { background: #d1495b; box-shadow: 0 0 0 1px #d1495b; }
+.pipe-dot.unrecognised { background: var(--neutral); box-shadow: 0 0 0 1px var(--neutral); }
 .pipe-dot.spin {
   border-top-color: transparent; border-radius: 50%;
   animation: spin 0.8s linear infinite; background: transparent; box-shadow: none;

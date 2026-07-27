@@ -4,7 +4,7 @@ import { formatDate } from '../dates';
 import { StatusBadge } from '../components/StatusBadge';
 
 // The Python ingestion service (CORS-enabled). Called directly; not via the Vite proxy.
-const INGEST = 'http://localhost:8020';
+const INGEST = 'http://localhost:8030';
 
 // One streamed pipeline event.
 interface Stage {
@@ -149,6 +149,7 @@ const NAMES: Record<string, string> = {
   start: 'Received', extract: 'Extract + normalise', classify: 'Classify',
   parsing: 'Parsing with local AI…', parse: 'Parsed structure', apply: 'Materialise timeline',
   persist: 'Saved to database', done: 'Done', error: 'Error',
+  unrecognised: 'Not an amendment',
 };
 const label = (st: string) => NAMES[st] ?? st;
 

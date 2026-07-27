@@ -59,6 +59,20 @@ def _run(text: str, model: str, do_persist: bool) -> Iterator[str]:
             missing=meta.missing,
         )
 
+        # Not an amendment? Stop here — don't waste the slow parse on garbage input.
+        if not (meta.md_family and meta.issued_date and meta.entity_type_code):
+            yield _event(
+                "unrecognised",
+                message=(
+                    "This doesn't look like an RBI amendment — I couldn't find an entity, "
+                    "a Master Direction family, or an effective date. Try the \"Load example\" "
+                    "button, or paste the operative text of an amendment "
+                    "(e.g. \"…the following shall be inserted in Chapter V …\")."
+                ),
+            )
+            yield _event("done")
+            return
+
         _ = operative_section(clean)
         yield _event("parsing", message=f"running {model} — this is the slow step")
         result = parse_document(clean, model=model)
