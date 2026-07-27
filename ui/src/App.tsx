@@ -8,13 +8,19 @@ import { Ask } from './screens/Ask';
 
 type Tab = 'ask' | 'explorer' | 'changes' | 'timeline' | 'comparison' | 'ingest';
 
-const TABS: { id: Tab; label: string }[] = [
-  { id: 'ask', label: 'Ask' },
-  { id: 'explorer', label: 'As-of explorer' },
-  { id: 'changes', label: 'Change feed' },
-  { id: 'timeline', label: 'Clause timeline' },
-  { id: 'comparison', label: 'Naive RAG vs full' },
-  { id: 'ingest', label: 'Ingest (live)' },
+const TABS: { id: Tab; label: string; blurb: string }[] = [
+  { id: 'ask', label: 'Ask',
+    blurb: 'Type a question in plain English — it works out the bank and the date, and returns the exact rule.' },
+  { id: 'explorer', label: 'Explore by date',
+    blurb: 'Pick a bank and a clause, then drag the date. Watch the answer change as rules come into force.' },
+  { id: 'changes', label: 'Change feed',
+    blurb: 'One policy, many banks: the same rule lands at a different clause number for each bank type.' },
+  { id: 'timeline', label: 'Clause history',
+    blurb: 'Every version of a clause over time, with the amendment that created or replaced each one.' },
+  { id: 'comparison', label: 'vs. Normal AI',
+    blurb: 'The same question through normal AI search and through this system — see where normal AI picks the wrong bank.' },
+  { id: 'ingest', label: 'Add a document',
+    blurb: 'Paste a real amendment and watch it get read, structured, and made searchable — live.' },
 ];
 
 function useTheme() {
@@ -35,15 +41,16 @@ function useTheme() {
 export function App() {
   const [tab, setTab] = useState<Tab>('ask');
   const { effective, toggle } = useTheme();
+  const active = TABS.find((t) => t.id === tab)!;
 
   return (
     <div className="app">
       <header className="topbar">
         <div className="brand">
-          <div className="brand-mark" aria-hidden />
+          <div className="brand-mark" aria-hidden><span /></div>
           <div>
             <h1>RBI Regulatory Timeline</h1>
-            <p>What does a clause say, for this entity, on this date?</p>
+            <p>The right rule, for the right bank, on the right date.</p>
           </div>
         </div>
         <button className="icon-btn" onClick={toggle} aria-label="Toggle colour theme" title="Toggle theme">
@@ -58,6 +65,8 @@ export function App() {
           </button>
         ))}
       </nav>
+
+      <p className="view-intro" key={active.id}>{active.blurb}</p>
 
       <main>
         {tab === 'ask' && <Ask />}

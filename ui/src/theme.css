@@ -424,3 +424,96 @@ button { font-family: inherit; cursor: pointer; }
 .stack { display: grid; gap: 16px; }
 .grid-2 { display: grid; grid-template-columns: 1fr; gap: 20px; }
 @media (min-width: 760px) { .grid-2 { grid-template-columns: 1.15fr 1fr; } }
+
+/* ============================================================================
+   Visual refresh — warmth, depth, and self-explanation
+   ========================================================================== */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ambient glow behind the header for depth */
+body {
+  background:
+    radial-gradient(900px 380px at 50% -160px,
+      color-mix(in srgb, var(--brand) 16%, transparent), transparent 70%),
+    var(--bg);
+  background-attachment: fixed;
+}
+
+/* header + identity */
+.topbar { padding: 14px 0 18px; }
+.brand-mark {
+  width: 40px; height: 40px; border-radius: 11px; position: relative; overflow: hidden;
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--brand) 40%, transparent);
+}
+.brand-mark span {
+  position: absolute; inset: 0;
+  background: linear-gradient(150deg, rgba(255, 255, 255, .4), transparent 55%);
+}
+.brand h1 { font-size: 17px; font-weight: 720; }
+.brand p { font-size: 13px; color: var(--muted); }
+.icon-btn { border-radius: 11px; }
+.icon-btn:hover { transform: translateY(-1px); }
+
+/* nav — the active tab clearly lifts */
+.nav { padding: 5px; }
+.nav button { padding: 9px 16px; transition: background .16s, color .16s, box-shadow .16s; }
+.nav button[aria-current='true'] {
+  background: var(--surface); color: var(--ink);
+  box-shadow: 0 1px 2px rgba(20, 28, 46, .08), 0 6px 16px rgba(20, 28, 46, .1);
+  background-image: linear-gradient(var(--surface), var(--surface)),
+    linear-gradient(120deg, color-mix(in srgb, var(--future) 30%, transparent),
+      color-mix(in srgb, var(--now) 30%, transparent));
+  background-origin: border-box; background-clip: padding-box, border-box;
+  border: 1px solid transparent;
+}
+
+/* "what you can do here" line under the nav */
+.view-intro {
+  margin: -6px 2px 22px; font-size: 14px; color: var(--ink-soft); line-height: 1.5;
+  display: flex; gap: 10px; align-items: baseline; max-width: 70ch;
+  animation: fadeUp .28s ease;
+}
+.view-intro::before {
+  content: ''; width: 7px; height: 7px; border-radius: 50%; flex: none; margin-top: 7px;
+  background: linear-gradient(135deg, var(--future), var(--now));
+}
+
+/* landing hero */
+.hero { padding: 6px 2px 2px; animation: fadeUp .3s ease; }
+.hero-title {
+  font-size: clamp(25px, 4.4vw, 36px); font-weight: 780; letter-spacing: -.025em;
+  line-height: 1.08; text-wrap: balance; margin: 0 0 14px;
+}
+.hero-sub { font-size: 15.5px; line-height: 1.62; color: var(--ink-soft); max-width: 60ch; }
+.hero-sub b { color: var(--ink); font-weight: 650; }
+.hero-try {
+  margin: 26px 0 10px; font-size: 11.5px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* starter suggestions — inviting, with an arrow that slides */
+.starter {
+  position: relative; padding-right: 40px;
+  transition: border-color .16s, background .16s, transform .16s, box-shadow .16s;
+}
+.starter::after {
+  content: '→'; position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
+  color: var(--brand); opacity: .55; transition: transform .16s, opacity .16s;
+}
+.starter:hover {
+  border-color: color-mix(in srgb, var(--brand) 45%, var(--line));
+  box-shadow: 0 6px 18px rgba(20, 28, 46, .08); transform: translateY(-1px);
+}
+.starter:hover::after { transform: translateY(-50%) translateX(3px); opacity: 1; }
+
+/* primary action — brand gradient */
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand), var(--now));
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--brand) 32%, transparent);
+}
+.btn-primary:hover { transform: translateY(-1px); filter: saturate(1.08) brightness(1.04); }
+.btn-primary:disabled { transform: none; box-shadow: none; }
+
+/* cards get a hair more depth and a gentle hover */
+.card { transition: box-shadow .18s, transform .18s; }
+.card:hover { box-shadow: var(--shadow-lift); }

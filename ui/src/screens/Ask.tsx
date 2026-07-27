@@ -48,20 +48,22 @@ export function Ask() {
 
   return (
     <div className="stack">
-      <div className="card card-pad">
-        <p className="hint">
-          Ask in plain English. It works out <b>which entity</b> and <b>as of when</b> from your
-          question, filters to that slice, then finds the clause — and if you don&rsquo;t say who or
-          when, it asks. Same correctness as the explorer, just conversational.
-        </p>
-        {turns.length === 0 && (
+      {turns.length === 0 && (
+        <div className="hero">
+          <h2 className="hero-title">Ask about a banking rule — in plain English.</h2>
+          <p className="hero-sub">
+            The same rule can have a different answer depending on <b>which bank</b> and <b>which date</b> —
+            rules are often published months before they take effect. Ask a question and it works out both,
+            returns the exact wording, or honestly says a rule isn&rsquo;t in force yet.
+          </p>
+          <div className="hero-try">Try one:</div>
           <div className="starters">
             {STARTERS.map((s) => (
               <button key={s} className="starter" onClick={() => submit(s)}>{s}</button>
             ))}
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
       {turns.length > 0 && (
         <div className="card card-pad chat">
