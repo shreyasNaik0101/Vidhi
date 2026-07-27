@@ -14,6 +14,9 @@ venv/
 # Env / secrets
 .env
 
+# Personal interview-prep notes — kept local, not in the public repo
+docs/interview-guide.md
+
 # Data — raw downloads and caches are not committed. samples/ and golden/ ARE.
 data/raw/
 data/llm_cache.db
