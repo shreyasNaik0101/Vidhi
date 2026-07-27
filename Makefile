@@ -58,8 +58,8 @@ classify:         ## [stage 4] regex-first, gemma3:4b fallback (not yet implemen
 parse:            ## [stage 5] qwen3:8b -> strict JSON ops (not yet implemented)
 	@echo "TODO: src/rbi/parse"
 
-verify:           ## [stage 6] Bedrock verifier — the only paid step (not yet implemented)
-	@echo "TODO: src/rbi/verify"
+verify:           ## [stage 6] independent second check (stub = free; --bedrock = paid)
+	python -m rbi.verify.cli --sample-rate 1.0
 
 apply:            ## [stage 7] materialise clause timeline (not yet implemented)
 	@echo "TODO: src/rbi/apply"
