@@ -373,6 +373,45 @@ button { font-family: inherit; cursor: pointer; }
 .pipe-dot { animation: dotPop .34s cubic-bezier(.2, .9, .3, 1.5) both; }
 @keyframes dotPop { 0% { transform: scale(0); } 60% { transform: scale(1.28); } 100% { transform: scale(1); } }
 
+/* ---- ask (chat) ---- */
+.starters { display: grid; gap: 8px; margin-top: 12px; }
+.starter {
+  text-align: left; border: 1px solid var(--line); background: var(--surface-2);
+  color: var(--ink-soft); border-radius: 10px; padding: 11px 14px; font-size: 13.5px;
+  transition: border-color .15s, background .15s;
+}
+.starter:hover { border-color: var(--brand); background: var(--surface); color: var(--ink); }
+
+.chat { display: grid; gap: 16px; }
+.exchange { display: grid; gap: 8px; }
+.bubble { font-size: 14px; line-height: 1.55; border-radius: 12px; padding: 11px 15px; max-width: 90%; }
+.bubble.user {
+  justify-self: end; background: var(--brand); color: #fff; border-bottom-right-radius: 4px;
+}
+.bubble.bot {
+  justify-self: start; background: var(--surface-2); border: 1px solid var(--line);
+  color: var(--ink); border-bottom-left-radius: 4px; display: grid; gap: 10px;
+}
+.bubble.bot.muted { color: var(--muted); }
+.read-as { font-size: 12.5px; color: var(--muted); }
+.read-as b { color: var(--brand-ink); }
+.answer-line { display: flex; }
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.fill-chip {
+  border: 1px solid var(--brand); background: transparent; color: var(--brand-ink);
+  border-radius: 999px; padding: 5px 12px; font-size: 12.5px; font-weight: 600;
+  transition: background .15s;
+}
+.fill-chip:hover { background: var(--future-soft); }
+
+.ask-bar { display: flex; gap: 10px; align-items: center; }
+.ask-input {
+  flex: 1; font: inherit; font-size: 14px; color: var(--ink);
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px;
+  padding: 11px 14px;
+}
+.ask-input:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+
 /* ---- states ---- */
 .hint { font-size: 13px; color: var(--muted); }
 .error {

@@ -12,6 +12,7 @@ import {
 } from './queries.js';
 import { embedQuery, nearestChunk } from './naive.js';
 import { loadComparableGolden } from './golden.js';
+import { ask } from './ask.js';
 
 const app = express();
 app.use(cors());
@@ -69,6 +70,14 @@ app.get('/api/changes', wrap(async (_req, res) => {
 // GET /api/golden  -> comparison-ready golden scenarios (entity + clause + date)
 app.get('/api/golden', wrap(async (_req, res) => {
   res.json(loadComparableGolden());
+}));
+
+// GET /api/ask?q=...  -> natural-language question: extract who/when, filter, then
+// keyword-rank clauses within that slice. Asks for entity/date when missing.
+app.get('/api/ask', wrap(async (req, res) => {
+  const q = req.query.q;
+  if (!q || !String(q).trim()) return res.status(400).json({ error: 'q is required' });
+  res.json(await ask(pool, { question: String(q), family: req.query.family || 'IRACP' }));
 }));
 
 // GET /api/compare?entity=&family=&clause=&as_of=&question=

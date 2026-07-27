@@ -96,6 +96,14 @@ export interface CompareResult {
   naive: NaiveAnswer | null;
 }
 
+export interface AskResult {
+  need?: 'entity' | 'date';
+  message?: string;
+  entity?: string;
+  interpreted?: { entity: string; family: string; asOf: string; clause: string | null };
+  answer?: Resolution;
+}
+
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(path);
   if (!res.ok) {
@@ -117,6 +125,8 @@ export const api = {
   timeline: (family: string, entity: string, clause: string) =>
     get<TimelineVersion[]>(`/api/clauses/${family}/${entity}/${clause}/timeline`),
   golden: () => get<GoldenScenario[]>('/api/golden'),
+  ask: (q: string, family = 'IRACP') =>
+    get<AskResult>(`/api/ask?q=${encodeURIComponent(q)}&family=${family}`),
   compare: (s: GoldenScenario) =>
     get<CompareResult>(
       `/api/compare?entity=${s.entity}&family=${s.family}&clause=${s.clause}` +

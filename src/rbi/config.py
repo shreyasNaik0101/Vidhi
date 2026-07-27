@@ -25,7 +25,7 @@ def _get(key: str, default: str | None = None) -> str:
 
 @dataclass(frozen=True)
 class Config:
-    database_url: str = os.getenv("DATABASE_URL", "postgresql://rbi:rbi@localhost:5433/rbi")
+    database_url: str = os.getenv("DATABASE_URL", "postgresql://rbi:rbi@127.0.0.1:5433/rbi")
 
     ollama_host: str = os.getenv("OLLAMA_HOST", "http://localhost:11434")
     ollama_model_extract: str = os.getenv("OLLAMA_MODEL_EXTRACT", "gemma3:4b")

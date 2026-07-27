@@ -4,10 +4,12 @@ import { ChangeFeed } from './screens/ChangeFeed';
 import { ClauseTimeline } from './screens/ClauseTimeline';
 import { Comparison } from './screens/Comparison';
 import { Ingest } from './screens/Ingest';
+import { Ask } from './screens/Ask';
 
-type Tab = 'explorer' | 'changes' | 'timeline' | 'comparison' | 'ingest';
+type Tab = 'ask' | 'explorer' | 'changes' | 'timeline' | 'comparison' | 'ingest';
 
 const TABS: { id: Tab; label: string }[] = [
+  { id: 'ask', label: 'Ask' },
   { id: 'explorer', label: 'As-of explorer' },
   { id: 'changes', label: 'Change feed' },
   { id: 'timeline', label: 'Clause timeline' },
@@ -31,7 +33,7 @@ function useTheme() {
 }
 
 export function App() {
-  const [tab, setTab] = useState<Tab>('explorer');
+  const [tab, setTab] = useState<Tab>('ask');
   const { effective, toggle } = useTheme();
 
   return (
@@ -58,6 +60,7 @@ export function App() {
       </nav>
 
       <main>
+        {tab === 'ask' && <Ask />}
         {tab === 'explorer' && <AsOfExplorer />}
         {tab === 'changes' && <ChangeFeed />}
         {tab === 'timeline' && <ClauseTimeline />}
