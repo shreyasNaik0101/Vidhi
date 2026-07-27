@@ -65,6 +65,24 @@ def test_md_family_from_title_not_parent_reference():
     assert classify_text(text).md_family == "IRACP"
 
 
+_HDR = ("RBI/2026-27/999 July 16, 2026 Reserve Bank of India (Local Area Banks – Income "
+        "Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026 ")
+
+
+def test_effective_date_phrasings():
+    from rbi.classify.rules import classify_text
+    assert classify_text(_HDR + "come into force with effect from October 01, 2026.").effective_date == date(2026, 10, 1)
+    assert classify_text(_HDR + "These Directions shall be effective from April 01, 2027.").effective_date == date(2027, 4, 1)
+    assert classify_text(_HDR + "This shall come into force w.e.f. December 15, 2026.").effective_date == date(2026, 12, 15)
+
+
+def test_immediate_effect_uses_issue_date():
+    from rbi.classify.rules import classify_text
+    m = classify_text(_HDR + "These Directions come into force with immediate effect.")
+    assert m.issued_date == date(2026, 7, 16)
+    assert m.effective_date == date(2026, 7, 16)   # no explicit date -> issue date
+
+
 def test_entity_name_variants_map_to_codes():
     # 'Urban Cooperative Banks' (no hyphen) and 'Co-operative' both resolve.
     t = ("RBI/2026-27/999 July 16, 2026 Reserve Bank of India (Urban Cooperative Banks "

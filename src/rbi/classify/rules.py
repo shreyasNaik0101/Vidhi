@@ -21,8 +21,18 @@ _TITLE = re.compile(
 _PARENTHETICAL = re.compile(r"Reserve Bank of India\s*\(([^)]+)\)")
 
 # --- dates ---
+# An explicit effective date after any of the common "in force" phrasings. The date
+# itself must be proper-case (parsed with %B); only the phrase is case-insensitive.
 _EFFECTIVE = re.compile(
-    r"come into force with effect from\s+([A-Z][a-z]+ \d{1,2}, \d{4})"
+    r"(?:[Cc]ome into force|[Cc]omes into force|[Ss]hall come into force|"
+    r"[Ee]ffective|[Ww]ith effect|[Ww]\.e\.f\.?)"
+    r"[^.\n]{0,40}?"
+    r"([A-Z][a-z]+ \d{1,2}, \d{4})"
+)
+# "with immediate effect" / "at once" -> effective = the issue date.
+_IMMEDIATE = re.compile(
+    r"with immediate effect|come into force at once|effective immediately",
+    re.IGNORECASE,
 )
 _ANY_DATE = re.compile(r"[A-Z][a-z]+ \d{1,2}, \d{4}")
 
@@ -98,6 +108,8 @@ def classify_text(text: str) -> DocumentMeta:
         m.issued_date = _parse_date(hit.group(0))
     if e := _EFFECTIVE.search(text):
         m.effective_date = _parse_date(e.group(1))
+    elif _IMMEDIATE.search(text):
+        m.effective_date = m.issued_date          # in force from the day it was issued
 
     m.missing = [
         f for f in ("rbi_ref", "title", "doc_type", "md_family",
