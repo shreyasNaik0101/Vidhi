@@ -128,6 +128,20 @@ def test_invalid_json_raises(rrb_section):
         postprocess("not json at all", rrb_section)
 
 
+def test_omit_not_downgraded_when_clause_text_absent():
+    # an omit names a clause to remove but does NOT contain its body — postprocess
+    # must not try to extract the text (that regression turned omits into 'unresolved').
+    source = "In Chapter V - Income Recognition, clause 68D shall be omitted."
+    raw = json.dumps({"operations": [{
+        "seq": 1, "operation": "omit", "clause_numbers": ["68D"],
+        "evidence_span": "clause 68D shall be omitted", "confidence": 0.9,
+    }]})
+    op = postprocess(raw, source).operations[0]
+    assert op.operation == "omit"          # not downgraded
+    assert op.clause_numbers == ["68D"]
+    assert op.new_clauses == []
+
+
 # --- live smoke (skips unless the configured parse model is pulled) ---
 def _ollama_models() -> set[str]:
     try:

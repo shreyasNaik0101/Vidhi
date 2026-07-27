@@ -82,11 +82,12 @@ def persist(
                 cur.execute(
                     """INSERT INTO clause
                        (md_family, entity_type_id, chapter, clause_number, sort_key,
-                        text, valid_from, valid_to, created_by_op_id)
-                       VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
+                        text, valid_from, valid_to, created_by_op_id, superseded_by_op_id)
+                       VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
                     (v.md_family, entity_ids[v.entity_type_code], v.chapter,
                      v.clause_number, v.sort_key, v.text, v.valid_from, v.valid_to,
-                     op_id_by_ref.get(v.created_by_ref)),
+                     op_id_by_ref.get(v.created_by_ref),
+                     op_id_by_ref.get(v.superseded_by_ref)),
                 )
 
             for g in groups:

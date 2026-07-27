@@ -78,6 +78,8 @@ def postprocess(raw: str, source: str) -> ParseResult:
             _downgrade(op, "evidence_span not found verbatim in source")
         elif op.confidence < _CONFIDENCE_FLOOR:
             _downgrade(op, f"confidence {op.confidence} below floor {_CONFIDENCE_FLOOR}")
-        elif op.clause_numbers:
+        elif op.operation in ("insert", "substitute") and op.clause_numbers:
+            # only insert/substitute introduce new text; an omit just names the clause
+            # to remove and does NOT contain its body, so don't try to extract it.
             _fill_clause_texts(op, source)
     return result
