@@ -99,7 +99,7 @@ WHERE md_family = :family AND entity_type_id = :entity AND clause_number = :clau
 | 1 | fetch | requests + BeautifulSoup | — *(not built; corpus is the 2 samples)* |
 | 2–3 | extract / normalise | pymupdf | — |
 | 4 | classify | regex-first, gemma fallback | local |
-| 5 | parse | local model, grammar-constrained JSON | local |
+| 5 | parse | local model, grammar-constrained JSON — native **or LangChain** backend | local |
 | 6 | verify | Bedrock | *(not built — the one paid step)* |
 | 7 | apply | python | — |
 | 8 | group | embeddings + similarity | local |
@@ -107,7 +107,9 @@ WHERE md_family = :family AND entity_type_id = :entity AND clause_number = :clau
 The parser emits **structure only** (operation, chapter, clause numbers, a short *verbatim*
 evidence span); the clause body is sliced from source deterministically, so it is verbatim by
 construction. Evidence spans are validated by substring check — a cheap hallucination guard.
-`unresolved` is a first-class output: the system is built to say "I can't resolve this".
+`unresolved` is a first-class output: the system is built to say "I can't resolve this". The LLM
+call itself runs through either backend (native HTTP or a **LangChain** LCEL chain) behind the same
+validators, so the guarantees above hold regardless of which one is selected.
 
 ## Stack
 
