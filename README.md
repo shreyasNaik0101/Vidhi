@@ -8,6 +8,15 @@ The system filters on **entity type** and **temporal validity** *before* it does
 semantic. Semantic similarity narrows within an already-correct slice; it never selects the
 slice. When nothing fits, the system **abstains** instead of guessing.
 
+## ▶ Live demo — [shreyasnaik0101.github.io/Vidhi](https://shreyasnaik0101.github.io/Vidhi/)
+
+No setup; runs entirely in the browser. Ask a question in plain English, drag a date across the
+moment a rule comes into force, and see the same question answered by normal AI search vs. this
+system side by side. The hosted demo serves every read feature from a dataset **exported out of
+the running system**, with the resolver and question-parsing logic running client-side; the *Add a
+document* tab **replays a recorded run** of the live ingestion pipeline. The full stack — local
+models, Postgres, and live ingestion — runs with the [Quick start](#quick-start) below.
+
 ---
 
 ## Why this exists
