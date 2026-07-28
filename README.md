@@ -115,6 +115,11 @@ construction. Evidence spans are validated by substring check — a cheap halluc
 - **Local models via Ollama:** `gemma4:latest` for parse/classify, `nomic-embed-text-v2-moe` for
   embeddings. *(The original brief named `qwen3:8b` / `gemma3:4b`; those weren't pulled on this
   machine, so the model is configurable and set to what's available.)*
+- **Parse backend (swappable):** the LLM parse step has two interchangeable backends behind one
+  interface — `native` (direct Ollama HTTP, with the response cache + cost ledger) and `langchain`
+  (a LangChain `ChatOllama | StrOutputParser` LCEL chain over the same local model). Select with
+  `PARSE_BACKEND=langchain`; both feed the identical deterministic validators. See
+  `src/rbi/parse/langchain_runner.py`.
 - **Store:** Postgres 16 + pgvector in Docker (never RDS — cost control is a functional requirement)
 - **API:** Node + Express (`api/`) — *chosen over the brief's FastAPI by preference; the pipeline
   stays in Python and fills the DB, the API only reads, and the as-of resolver is ported to JS with

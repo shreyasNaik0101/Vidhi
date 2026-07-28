@@ -23,6 +23,12 @@ api = [
     "fastapi>=0.110",
     "uvicorn>=0.29",
 ]
+# Optional LangChain parse backend (PARSE_BACKEND=langchain) — an LCEL chain over
+# the same local Ollama model, feeding the same validators as the native path.
+langchain = [
+    "langchain-core>=0.3.72,<1.0",
+    "langchain-ollama>=0.2,<0.3",
+]
 dev = [
     "pytest>=8.0",
     "ruff>=0.4",

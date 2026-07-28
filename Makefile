@@ -1,7 +1,8 @@
 # RBI Regulatory Timeline Engine — every stage has a target (PROJECT_SPEC.md §4).
 # POSIX make. On Windows, run targets under Git Bash or invoke the python commands directly.
 
-.PHONY: install db-up db-down db-logs test lint extract cost \
+.PHONY: install db-up db-down db-logs test test-llm lint extract cost \
+        langchain-install db-sync-langchain \
         fetch normalise classify parse verify apply group eval pipeline aws-destroy
 
 export PYTHONPATH := src
@@ -38,9 +39,19 @@ api-dev:          ## start the API on :3001 (needs db-up + db-sync first)
 ingest-dev:       ## start the live-ingestion service on :8030 (FastAPI)
 	python -m uvicorn rbi.ingest.service:app --port 8030
 
+# --- parse backend (native | langchain) ---
+langchain-install: ## install the optional LangChain parse backend
+	python -m pip install -e ".[langchain]"
+
+db-sync-langchain: ## run the pipeline with the LangChain parse backend
+	PARSE_BACKEND=langchain python -m rbi.db.cli sync --model gemma4:latest
+
 # --- quality ---
 test:             ## run the test suite
 	python -m pytest -q
+
+test-llm:         ## run the live local-model tests (slow; incl. LangChain end-to-end)
+	RUN_LLM_TESTS=1 python -m pytest tests/test_langchain_parse.py -q
 
 lint:
 	ruff check src tests

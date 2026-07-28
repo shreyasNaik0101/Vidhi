@@ -33,6 +33,10 @@ class Config:
     ollama_model_parse: str = os.getenv("OLLAMA_MODEL_PARSE", "qwen3:8b")
     ollama_num_ctx: int = int(os.getenv("OLLAMA_NUM_CTX", "4096"))
 
+    # Which parse backend to use: "native" (direct Ollama HTTP) or "langchain"
+    # (an LCEL chain over the same local model). Both feed the same validators.
+    parse_backend: str = os.getenv("PARSE_BACKEND", "native")
+
     max_spend_usd: float = float(os.getenv("MAX_SPEND_USD", "15.00"))
     llm_cache_path: Path = REPO_ROOT / os.getenv("LLM_CACHE_PATH", "data/llm_cache.db")
 

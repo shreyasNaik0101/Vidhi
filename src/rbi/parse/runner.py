@@ -16,8 +16,19 @@ def parse_document(
     model: str | None = None,
     cache: ResponseCache | None = None,
     ledger: CostLedger | None = None,
+    backend: str | None = None,
 ) -> ParseResult:
-    """Parse one amendment's normalised text into validated operations."""
+    """Parse one amendment's normalised text into validated operations.
+
+    `backend` selects the LLM path: "native" (direct Ollama HTTP, with the response
+    cache + cost ledger) or "langchain" (an LCEL chain over the same model). Both
+    feed the same validators. Defaults to config.parse_backend (PARSE_BACKEND).
+    """
+    backend = backend or config.parse_backend
+    if backend == "langchain":
+        from .langchain_runner import parse_document_langchain
+        return parse_document_langchain(normalised_text, model=model)
+
     model = model or config.ollama_model_parse
     section = operative_section(normalised_text)
     raw = generate(
