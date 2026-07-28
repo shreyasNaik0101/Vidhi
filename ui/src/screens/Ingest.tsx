@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react';
-import { api, type Resolution } from '../api';
+import { api, isStatic, type Resolution } from '../api';
 import { formatDate } from '../dates';
 import { StatusBadge } from '../components/StatusBadge';
+import replay from '../staticData/ingest.json';
 
 // The Python ingestion service (CORS-enabled). Called directly; not via the Vite proxy.
 const INGEST = 'http://localhost:8030';
@@ -33,12 +34,15 @@ export function Ingest() {
       if (next.stage === 'classify') effectiveRef.current = (next.effective as string) ?? null;
       if (next.stage === 'persist' && next.query) void closeLoop(next.query as QueryHint);
       if (next.stage === 'done' || next.stage === 'error') setRunning(false);
-      window.setTimeout(step, next.stage === 'start' ? 220 : 480);
+      // dwell longer on the parse step so the local-model spinner reads as the slow one
+      const dwell = next.stage === 'start' ? 220 : next.stage === 'parsing' ? 1700 : 520;
+      window.setTimeout(step, dwell);
     };
     step();
   }
 
   async function loadExample() {
+    if (isStatic) { setText(replay.example); return; }
     const r = await fetch(`${INGEST}/example`).then((x) => x.json());
     setText(r.text || '');
   }
@@ -49,6 +53,12 @@ export function Ingest() {
     setRunning(true);
     effectiveRef.current = null;
     queue.current = [];
+    // Static (hosted) mode: no backend — replay a recorded run of the real pipeline.
+    if (isStatic) {
+      for (const ev of replay.stream as unknown as Stage[]) queue.current.push(ev);
+      drain();
+      return;
+    }
     try {
       const res = await fetch(`${INGEST}/ingest`, {
         method: 'POST',
@@ -87,9 +97,11 @@ export function Ingest() {
     <div className="stack">
       <div className="card card-pad">
         <p className="hint" style={{ marginBottom: 12 }}>
-          Paste an RBI amendment and watch the pipeline run <b>live</b> — extract → classify →
+          Paste an RBI amendment and watch the pipeline run — extract → classify →
           the AI parses it into structured clauses → it&rsquo;s saved and instantly queryable.
-          Nothing here is hardcoded.
+          {isStatic
+            ? ' This hosted demo replays a recorded run of the real pipeline; clone the repo to ingest live against the local models.'
+            : ' Nothing here is hardcoded.'}
         </p>
         <textarea
           className="ingest-box"

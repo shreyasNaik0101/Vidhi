@@ -1,0 +1,1969 @@
+{
+  "generatedAt": "2026-07-28T05:11:57.055Z",
+  "families": [
+    "IRACP"
+  ],
+  "entities": [
+    {
+      "code": "LAB",
+      "name": "Local Area Banks"
+    },
+    {
+      "code": "RRB",
+      "name": "Regional Rural Banks"
+    },
+    {
+      "code": "RCB",
+      "name": "Rural Co-operative Banks"
+    },
+    {
+      "code": "UCB",
+      "name": "Urban Co-operative Banks"
+    },
+    {
+      "code": "AIFI",
+      "name": "All India Financial Institutions"
+    },
+    {
+      "code": "NBFC",
+      "name": "Non-Banking Financial Companies"
+    },
+    {
+      "code": "SFB",
+      "name": "Small Finance Banks"
+    },
+    {
+      "code": "SCB",
+      "name": "Commercial Banks"
+    },
+    {
+      "code": "PB",
+      "name": "Payments Banks"
+    },
+    {
+      "code": "HFC",
+      "name": "Housing Finance Companies"
+    },
+    {
+      "code": "ARC",
+      "name": "Asset Reconstruction Companies"
+    }
+  ],
+  "clausesByEntity": {
+    "IRACP": {
+      "LAB": [
+        {
+          "clauseNumber": "119C",
+          "chapter": "V"
+        },
+        {
+          "clauseNumber": "119D",
+          "chapter": "V"
+        }
+      ],
+      "RRB": [
+        {
+          "clauseNumber": "68C",
+          "chapter": "V"
+        },
+        {
+          "clauseNumber": "68D",
+          "chapter": "V"
+        }
+      ],
+      "SFB": [
+        {
+          "clauseNumber": "133C",
+          "chapter": "V"
+        },
+        {
+          "clauseNumber": "133D",
+          "chapter": "V"
+        }
+      ]
+    }
+  },
+  "timelines": {
+    "IRACP/LAB/119C": [
+      {
+        "clauseNumber": "119C",
+        "chapter": "V",
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "createdBy": "RBI/2026-27/202",
+        "supersededBy": null
+      }
+    ],
+    "IRACP/LAB/119D": [
+      {
+        "clauseNumber": "119D",
+        "chapter": "V",
+        "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "createdBy": "RBI/2026-27/202",
+        "supersededBy": null
+      }
+    ],
+    "IRACP/RRB/68C": [
+      {
+        "clauseNumber": "68C",
+        "chapter": "V",
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "createdBy": "RBI/2026-27/201",
+        "supersededBy": null
+      },
+      {
+        "clauseNumber": "68C",
+        "chapter": "V",
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on March 31, 2027, it shall be reversed through Profit and Loss account, latest by March 31, 2028, to the extent remaining unrealised as on that date.",
+        "validFrom": "2027-04-01",
+        "validTo": null,
+        "createdBy": "RBI/2027-28/045",
+        "supersededBy": null
+      }
+    ],
+    "IRACP/RRB/68D": [
+      {
+        "clauseNumber": "68D",
+        "chapter": "V",
+        "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "createdBy": "RBI/2026-27/201",
+        "supersededBy": null
+      }
+    ],
+    "IRACP/SFB/133C": [
+      {
+        "clauseNumber": "133C",
+        "chapter": "V",
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "createdBy": "RBI/2026-27/196",
+        "supersededBy": null
+      }
+    ],
+    "IRACP/SFB/133D": [
+      {
+        "clauseNumber": "133D",
+        "chapter": "V",
+        "text": "Any income received from an SNFA shall be recognised in the income statement as 'non-interest / other income', in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "createdBy": "RBI/2026-27/196",
+        "supersededBy": null
+      }
+    ]
+  },
+  "clauseVersions": [
+    {
+      "mdFamily": "IRACP",
+      "entityCode": "LAB",
+      "clauseNumber": "119C",
+      "sortKey": "00119C",
+      "chapter": "V",
+      "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+      "validFrom": "2026-10-01",
+      "validTo": null,
+      "issuedDate": "2026-07-16",
+      "sourceRef": "RBI/2026-27/202"
+    },
+    {
+      "mdFamily": "IRACP",
+      "entityCode": "LAB",
+      "clauseNumber": "119D",
+      "sortKey": "00119D",
+      "chapter": "V",
+      "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+      "validFrom": "2026-10-01",
+      "validTo": null,
+      "issuedDate": "2026-07-16",
+      "sourceRef": "RBI/2026-27/202"
+    },
+    {
+      "mdFamily": "IRACP",
+      "entityCode": "RRB",
+      "clauseNumber": "68C",
+      "sortKey": "00068C",
+      "chapter": "V",
+      "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+      "validFrom": "2026-10-01",
+      "validTo": null,
+      "issuedDate": "2026-07-16",
+      "sourceRef": "RBI/2026-27/201"
+    },
+    {
+      "mdFamily": "IRACP",
+      "entityCode": "RRB",
+      "clauseNumber": "68C",
+      "sortKey": "00068C",
+      "chapter": "V",
+      "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on March 31, 2027, it shall be reversed through Profit and Loss account, latest by March 31, 2028, to the extent remaining unrealised as on that date.",
+      "validFrom": "2027-04-01",
+      "validTo": null,
+      "issuedDate": "2027-04-01",
+      "sourceRef": "RBI/2027-28/045"
+    },
+    {
+      "mdFamily": "IRACP",
+      "entityCode": "RRB",
+      "clauseNumber": "68D",
+      "sortKey": "00068D",
+      "chapter": "V",
+      "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+      "validFrom": "2026-10-01",
+      "validTo": null,
+      "issuedDate": "2026-07-16",
+      "sourceRef": "RBI/2026-27/201"
+    },
+    {
+      "mdFamily": "IRACP",
+      "entityCode": "SFB",
+      "clauseNumber": "133C",
+      "sortKey": "00133C",
+      "chapter": "V",
+      "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+      "validFrom": "2026-10-01",
+      "validTo": null,
+      "issuedDate": "2026-07-16",
+      "sourceRef": "RBI/2026-27/196"
+    },
+    {
+      "mdFamily": "IRACP",
+      "entityCode": "SFB",
+      "clauseNumber": "133D",
+      "sortKey": "00133D",
+      "chapter": "V",
+      "text": "Any income received from an SNFA shall be recognised in the income statement as 'non-interest / other income', in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+      "validFrom": "2026-10-01",
+      "validTo": null,
+      "issuedDate": "2026-07-16",
+      "sourceRef": "RBI/2026-27/196"
+    }
+  ],
+  "changes": [
+    {
+      "id": 1,
+      "label": "SNFA income recognition",
+      "issuedDate": "2026-07-16",
+      "effectiveDate": "2026-10-01",
+      "members": [
+        {
+          "entityCode": "LAB",
+          "rbiRef": "RBI/2026-27/202",
+          "chapter": "V",
+          "sectionHeading": "E1.",
+          "similarity": 1
+        },
+        {
+          "entityCode": "SFB",
+          "rbiRef": "RBI/2026-27/196",
+          "chapter": "V",
+          "sectionHeading": "E1.",
+          "similarity": 1
+        }
+      ]
+    }
+  ],
+  "golden": [
+    {
+      "id": "g001",
+      "category": "lookup",
+      "question": "For a Regional Rural Bank, how is accrued but unrealised interest on an acquired SNFA treated?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "68C",
+      "asOf": "2026-10-15",
+      "expectedStatus": "in_force",
+      "note": "In force from 2026-10-01; asked well after."
+    },
+    {
+      "id": "g002",
+      "category": "lookup",
+      "question": "How must a Regional Rural Bank recognise income received from an SNFA?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "68D",
+      "asOf": "2026-10-15",
+      "expectedStatus": "in_force",
+      "note": "68D in force."
+    },
+    {
+      "id": "g003",
+      "category": "lookup",
+      "question": "For a Local Area Bank, what is the treatment of accrued but unrealised interest before acquiring an SNFA?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "119C",
+      "asOf": "2026-11-01",
+      "expectedStatus": "in_force",
+      "note": "LAB equivalent of RRB 68C."
+    },
+    {
+      "id": "g004",
+      "category": "lookup",
+      "question": "How does a Local Area Bank account for income received from an SNFA?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "119D",
+      "asOf": "2026-11-01",
+      "expectedStatus": "in_force",
+      "note": "LAB equivalent of RRB 68D."
+    },
+    {
+      "id": "g005",
+      "category": "lookup",
+      "question": "For a Small Finance Bank, how is pre-acquisition unrealised interest on an SNFA treated?",
+      "entity": "SFB",
+      "family": "IRACP",
+      "clause": "133C",
+      "asOf": "2026-12-01",
+      "expectedStatus": "in_force",
+      "note": "SFB coordinates from recon (RBI/2026-27/196)."
+    },
+    {
+      "id": "g006",
+      "category": "lookup",
+      "question": "As of mid-2027, is the SNFA income-recognition rule (clause 68C) still in force for Regional Rural Banks?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "68C",
+      "asOf": "2027-06-30",
+      "expectedStatus": "in_force",
+      "note": "No superseding amendment known; still open."
+    },
+    {
+      "id": "g007",
+      "category": "lookup",
+      "question": "On the day the amendment takes effect, does Local Area Bank clause 119D apply?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "119D",
+      "asOf": "2026-10-01",
+      "expectedStatus": "in_force",
+      "note": "valid_from is inclusive: effective date itself is in force."
+    },
+    {
+      "id": "g008",
+      "category": "lookup",
+      "question": "For a Small Finance Bank in January 2027, what does clause 133D require for income from an SNFA?",
+      "entity": "SFB",
+      "family": "IRACP",
+      "clause": "133D",
+      "asOf": "2027-01-01",
+      "expectedStatus": "in_force",
+      "note": "SFB 133D in force."
+    },
+    {
+      "id": "g009",
+      "category": "temporal_trap",
+      "question": "On 1 August 2026, what does Regional Rural Bank clause 68C say about SNFA interest?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "68C",
+      "asOf": "2026-08-01",
+      "expectedStatus": "not_yet_in_force",
+      "note": "Issued 2026-07-16 but effective 2026-10-01: not yet in force. Correct answer is that no provision is yet in force."
+    },
+    {
+      "id": "g010",
+      "category": "temporal_trap",
+      "question": "The day before it takes effect (30 Sep 2026), is Regional Rural Bank clause 68C in force?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "68C",
+      "asOf": "2026-09-30",
+      "expectedStatus": "not_yet_in_force",
+      "note": "Boundary: 30 Sep is still before the 1 Oct effective date."
+    },
+    {
+      "id": "g011",
+      "category": "temporal_trap",
+      "question": "Today (24 Jul 2026), does the new SNFA rule apply to Local Area Banks under clause 119C?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "119C",
+      "asOf": "2026-07-24",
+      "expectedStatus": "not_yet_in_force",
+      "note": "Published 8 days ago; not in force until 1 Oct 2026."
+    },
+    {
+      "id": "g012",
+      "category": "temporal_trap",
+      "question": "On 15 September 2026, what SNFA income treatment applies to a Small Finance Bank under clause 133C?",
+      "entity": "SFB",
+      "family": "IRACP",
+      "clause": "133C",
+      "asOf": "2026-09-15",
+      "expectedStatus": "not_yet_in_force",
+      "note": "Before 1 Oct 2026 effective date."
+    },
+    {
+      "id": "g013",
+      "category": "temporal_trap",
+      "question": "On the issue date itself (16 Jul 2026), is Regional Rural Bank clause 68D in force?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "68D",
+      "asOf": "2026-07-16",
+      "expectedStatus": "not_yet_in_force",
+      "note": "Issued != effective. Existence on issue date does not mean in force."
+    },
+    {
+      "id": "g014",
+      "category": "temporal_trap",
+      "question": "On 31 August 2026, how should a Local Area Bank treat income from an SNFA under clause 119D?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "119D",
+      "asOf": "2026-08-31",
+      "expectedStatus": "not_yet_in_force",
+      "note": "Still before effective date."
+    },
+    {
+      "id": "g015",
+      "category": "temporal_trap",
+      "question": "On 1 July 2026 (before the amendment was even issued), what did Regional Rural Bank clause 68C say?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "68C",
+      "asOf": "2026-07-01",
+      "expectedStatus": "not_yet_in_force",
+      "note": "Clause did not exist and is not in force; the timeline keys on effective date (2026-10-01)."
+    },
+    {
+      "id": "g016",
+      "category": "temporal_trap",
+      "question": "Is Local Area Bank clause 119C in force on 30 September 2026?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "119C",
+      "asOf": "2026-09-30",
+      "expectedStatus": "not_yet_in_force",
+      "note": "Boundary check for LAB."
+    },
+    {
+      "id": "g017",
+      "category": "entity_trap",
+      "question": "For a Regional Rural Bank, what does clause 119C provide about SNFA interest?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "119C",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "119C is the Local Area Bank number. Must not return LAB text; the RRB equivalent is 68C."
+    },
+    {
+      "id": "g018",
+      "category": "entity_trap",
+      "question": "For a Local Area Bank, what does clause 68C say?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "68C",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "68C is the RRB number; the LAB equivalent is 119C."
+    },
+    {
+      "id": "g019",
+      "category": "entity_trap",
+      "question": "For a Regional Rural Bank, what does clause 133C require?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "133C",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "133C is the Small Finance Bank number; RRB equivalent is 68C."
+    },
+    {
+      "id": "g020",
+      "category": "entity_trap",
+      "question": "For a Small Finance Bank, what does clause 68D say about SNFA income?",
+      "entity": "SFB",
+      "family": "IRACP",
+      "clause": "68D",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "68D is the RRB number; SFB equivalent is 133D."
+    },
+    {
+      "id": "g021",
+      "category": "entity_trap",
+      "question": "For a Local Area Bank, what does clause 68D provide?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "68D",
+      "asOf": "2026-10-15",
+      "expectedStatus": "no_provision",
+      "note": "LAB equivalent is 119D."
+    },
+    {
+      "id": "g022",
+      "category": "entity_trap",
+      "question": "For a Regional Rural Bank, what does clause 119D say?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "119D",
+      "asOf": "2026-12-01",
+      "expectedStatus": "no_provision",
+      "note": "119D is LAB's; RRB equivalent is 68D."
+    },
+    {
+      "id": "g023",
+      "category": "entity_trap",
+      "question": "For a Small Finance Bank, what does clause 119C provide about SNFA interest?",
+      "entity": "SFB",
+      "family": "IRACP",
+      "clause": "119C",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "119C is LAB's; SFB equivalent is 133C."
+    },
+    {
+      "id": "g024",
+      "category": "entity_trap",
+      "question": "For a Local Area Bank, what does clause 133D require?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "133D",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "133D is SFB's; LAB equivalent is 119D."
+    },
+    {
+      "id": "g033",
+      "category": "non_existent",
+      "question": "For a Regional Rural Bank, what does clause 68Z say?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "68Z",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "No such clause; must abstain, not fabricate."
+    },
+    {
+      "id": "g034",
+      "category": "non_existent",
+      "question": "For a Local Area Bank, what is the text of clause 200A?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "200A",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "Out-of-range clause number."
+    },
+    {
+      "id": "g035",
+      "category": "non_existent",
+      "question": "For a Regional Rural Bank, what does clause 70A provide?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "70A",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "Near 68C/68D but does not exist."
+    },
+    {
+      "id": "g036",
+      "category": "non_existent",
+      "question": "For a Small Finance Bank, what does clause 999 say?",
+      "entity": "SFB",
+      "family": "IRACP",
+      "clause": "999",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "Obviously non-existent."
+    },
+    {
+      "id": "g037",
+      "category": "non_existent",
+      "question": "For a Local Area Bank, what does clause 119E require?",
+      "entity": "LAB",
+      "family": "IRACP",
+      "clause": "119E",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "Only 119C and 119D were inserted; 119E does not exist."
+    },
+    {
+      "id": "g038",
+      "category": "non_existent",
+      "question": "For a Regional Rural Bank, what does clause 68E provide about SNFAs?",
+      "entity": "RRB",
+      "family": "IRACP",
+      "clause": "68E",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "Only 68C and 68D exist."
+    },
+    {
+      "id": "g039",
+      "category": "non_existent",
+      "question": "For a Small Finance Bank, what is clause 133E?",
+      "entity": "SFB",
+      "family": "IRACP",
+      "clause": "133E",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "Only 133C and 133D exist."
+    },
+    {
+      "id": "g040",
+      "category": "non_existent",
+      "question": "For a Regional Rural Bank, what does clause 68C say under the KYC Master Direction?",
+      "entity": "RRB",
+      "family": "KYC",
+      "clause": "68C",
+      "asOf": "2026-11-01",
+      "expectedStatus": "no_provision",
+      "note": "68C exists under IRACP, not KYC. Family filter must apply."
+    }
+  ],
+  "compare": {
+    "g001": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "68C",
+        "asOf": "2026-10-15",
+        "question": "For a Regional Rural Bank, how is accrued but unrealised interest on an acquired SNFA treated?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "68C",
+        "asOf": "2026-10-15",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68C",
+            "sortKey": "00068C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/201"
+          },
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68C",
+            "sortKey": "00068C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on March 31, 2027, it shall be reversed through Profit and Loss account, latest by March 31, 2028, to the extent remaining unrealised as on that date.",
+            "validFrom": "2027-04-01",
+            "validTo": null,
+            "issuedDate": "2027-04-01",
+            "sourceRef": "RBI/2027-28/045"
+          }
+        ],
+        "status": "in_force",
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "effectiveDate": null,
+        "note": null,
+        "sourceRef": "RBI/2026-27/201",
+        "issuedDate": "2026-07-16"
+      },
+      "naive": {
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of",
+        "answerEntity": "RRB",
+        "effectiveDate": "2027-04-01",
+        "issuedDate": "2027-04-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": false
+        }
+      }
+    },
+    "g002": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "68D",
+        "asOf": "2026-10-15",
+        "question": "How must a Regional Rural Bank recognise income received from an SNFA?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "68D",
+        "asOf": "2026-10-15",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68D",
+            "sortKey": "00068D",
+            "chapter": "V",
+            "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/201"
+          }
+        ],
+        "status": "in_force",
+        "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "effectiveDate": null,
+        "note": null,
+        "sourceRef": "RBI/2026-27/201",
+        "issuedDate": "2026-07-16"
+      },
+      "naive": {
+        "text": "be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30,",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": true,
+          "temporal": false,
+          "shouldAbstain": false
+        }
+      }
+    },
+    "g003": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "119C",
+        "asOf": "2026-11-01",
+        "question": "For a Local Area Bank, what is the treatment of accrued but unrealised interest before acquiring an SNFA?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "119C",
+        "asOf": "2026-11-01",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "LAB",
+            "clauseNumber": "119C",
+            "sortKey": "00119C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/202"
+          }
+        ],
+        "status": "in_force",
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "effectiveDate": null,
+        "note": null,
+        "sourceRef": "RBI/2026-27/202",
+        "issuedDate": "2026-07-16"
+      },
+      "naive": {
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of",
+        "answerEntity": "RRB",
+        "effectiveDate": "2027-04-01",
+        "issuedDate": "2027-04-01",
+        "errors": {
+          "entity": true,
+          "temporal": true,
+          "shouldAbstain": false
+        }
+      }
+    },
+    "g004": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "119D",
+        "asOf": "2026-11-01",
+        "question": "How does a Local Area Bank account for income received from an SNFA?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "119D",
+        "asOf": "2026-11-01",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "LAB",
+            "clauseNumber": "119D",
+            "sortKey": "00119D",
+            "chapter": "V",
+            "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/202"
+          }
+        ],
+        "status": "in_force",
+        "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "effectiveDate": null,
+        "note": null,
+        "sourceRef": "RBI/2026-27/202",
+        "issuedDate": "2026-07-16"
+      },
+      "naive": {
+        "text": "be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30,",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": false,
+          "shouldAbstain": false
+        }
+      }
+    },
+    "g005": {
+      "scenario": {
+        "entity": "SFB",
+        "family": "IRACP",
+        "clause": "133C",
+        "asOf": "2026-12-01",
+        "question": "For a Small Finance Bank, how is pre-acquisition unrealised interest on an SNFA treated?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "SFB",
+        "clauseNumber": "133C",
+        "asOf": "2026-12-01",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "SFB",
+            "clauseNumber": "133C",
+            "sortKey": "00133C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/196"
+          }
+        ],
+        "status": "in_force",
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "effectiveDate": null,
+        "note": null,
+        "sourceRef": "RBI/2026-27/196",
+        "issuedDate": "2026-07-16"
+      },
+      "naive": {
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of",
+        "answerEntity": "RRB",
+        "effectiveDate": "2027-04-01",
+        "issuedDate": "2027-04-01",
+        "errors": {
+          "entity": true,
+          "temporal": true,
+          "shouldAbstain": false
+        }
+      }
+    },
+    "g006": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "68C",
+        "asOf": "2027-06-30",
+        "question": "As of mid-2027, is the SNFA income-recognition rule (clause 68C) still in force for Regional Rural Banks?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "68C",
+        "asOf": "2027-06-30",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68C",
+            "sortKey": "00068C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/201"
+          },
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68C",
+            "sortKey": "00068C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on March 31, 2027, it shall be reversed through Profit and Loss account, latest by March 31, 2028, to the extent remaining unrealised as on that date.",
+            "validFrom": "2027-04-01",
+            "validTo": null,
+            "issuedDate": "2027-04-01",
+            "sourceRef": "RBI/2027-28/045"
+          }
+        ],
+        "status": "in_force",
+        "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "effectiveDate": null,
+        "note": null,
+        "sourceRef": "RBI/2026-27/201",
+        "issuedDate": "2026-07-16"
+      },
+      "naive": {
+        "text": "RBI/2027-28/045 DOR.STR.REC.180/21-04-048/2027-28 April 1, 2027 Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Third Amendment Directions, 2027 Please refer to the Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026",
+        "answerEntity": "RRB",
+        "effectiveDate": "2027-04-01",
+        "issuedDate": "2027-04-01",
+        "errors": {
+          "entity": false,
+          "temporal": false,
+          "shouldAbstain": false
+        }
+      }
+    },
+    "g007": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "119D",
+        "asOf": "2026-10-01",
+        "question": "On the day the amendment takes effect, does Local Area Bank clause 119D apply?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "119D",
+        "asOf": "2026-10-01",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "LAB",
+            "clauseNumber": "119D",
+            "sortKey": "00119D",
+            "chapter": "V",
+            "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/202"
+          }
+        ],
+        "status": "in_force",
+        "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "effectiveDate": null,
+        "note": null,
+        "sourceRef": "RBI/2026-27/202",
+        "issuedDate": "2026-07-16"
+      },
+      "naive": {
+        "text": "do, hereby issues the Amendment Directions hereinafter specified. 3. These Amendment Directions modify the Directions as under: (i) In Chapter V – Income Recognition, clause 68D shall be omitted. 4. The above amendment would come into force with effect from January 01, 2028. (Vaibhav Chaturvedi)",
+        "answerEntity": "RRB",
+        "effectiveDate": "2028-01-01",
+        "issuedDate": "2028-01-01",
+        "errors": {
+          "entity": true,
+          "temporal": true,
+          "shouldAbstain": false
+        }
+      }
+    },
+    "g008": {
+      "scenario": {
+        "entity": "SFB",
+        "family": "IRACP",
+        "clause": "133D",
+        "asOf": "2027-01-01",
+        "question": "For a Small Finance Bank in January 2027, what does clause 133D require for income from an SNFA?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "SFB",
+        "clauseNumber": "133D",
+        "asOf": "2027-01-01",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "SFB",
+            "clauseNumber": "133D",
+            "sortKey": "00133D",
+            "chapter": "V",
+            "text": "Any income received from an SNFA shall be recognised in the income statement as 'non-interest / other income', in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/196"
+          }
+        ],
+        "status": "in_force",
+        "text": "Any income received from an SNFA shall be recognised in the income statement as 'non-interest / other income', in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+        "validFrom": "2026-10-01",
+        "validTo": null,
+        "effectiveDate": null,
+        "note": null,
+        "sourceRef": "RBI/2026-27/196",
+        "issuedDate": "2026-07-16"
+      },
+      "naive": {
+        "text": "shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date. 133D. Any income received from an SNFA shall be recognised in the income statement as 'non-interest / other income', in the financial year",
+        "answerEntity": "SFB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": false,
+          "shouldAbstain": false
+        }
+      }
+    },
+    "g009": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "68C",
+        "asOf": "2026-08-01",
+        "question": "On 1 August 2026, what does Regional Rural Bank clause 68C say about SNFA interest?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "68C",
+        "asOf": "2026-08-01",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68C",
+            "sortKey": "00068C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/201"
+          },
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68C",
+            "sortKey": "00068C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on March 31, 2027, it shall be reversed through Profit and Loss account, latest by March 31, 2028, to the extent remaining unrealised as on that date.",
+            "validFrom": "2027-04-01",
+            "validTo": null,
+            "issuedDate": "2027-04-01",
+            "sourceRef": "RBI/2027-28/045"
+          }
+        ],
+        "status": "not_yet_in_force",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": "2026-10-01",
+        "note": "clause 68C was issued but comes into force 2026-10-01; on 2026-08-01 the prior text (if any) applies"
+      },
+      "naive": {
+        "text": "of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on March 31, 2027, it shall be reversed through Profit and Loss account, latest by March 31, 2028, to the extent remaining unrealised",
+        "answerEntity": "RRB",
+        "effectiveDate": "2027-04-01",
+        "issuedDate": "2027-04-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g010": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "68C",
+        "asOf": "2026-09-30",
+        "question": "The day before it takes effect (30 Sep 2026), is Regional Rural Bank clause 68C in force?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "68C",
+        "asOf": "2026-09-30",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68C",
+            "sortKey": "00068C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/201"
+          },
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68C",
+            "sortKey": "00068C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on March 31, 2027, it shall be reversed through Profit and Loss account, latest by March 31, 2028, to the extent remaining unrealised as on that date.",
+            "validFrom": "2027-04-01",
+            "validTo": null,
+            "issuedDate": "2027-04-01",
+            "sourceRef": "RBI/2027-28/045"
+          }
+        ],
+        "status": "not_yet_in_force",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": "2026-10-01",
+        "note": "clause 68C was issued but comes into force 2026-10-01; on 2026-09-30 the prior text (if any) applies"
+      },
+      "naive": {
+        "text": "RBI/2027-28/090 DOR.STR.REC.201/21-04-048/2027-28 January 1, 2028 Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Fourth Amendment Directions, 2028 Please refer to the Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026",
+        "answerEntity": "RRB",
+        "effectiveDate": "2028-01-01",
+        "issuedDate": "2028-01-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g011": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "119C",
+        "asOf": "2026-07-24",
+        "question": "Today (24 Jul 2026), does the new SNFA rule apply to Local Area Banks under clause 119C?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "119C",
+        "asOf": "2026-07-24",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "LAB",
+            "clauseNumber": "119C",
+            "sortKey": "00119C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/202"
+          }
+        ],
+        "status": "not_yet_in_force",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": "2026-10-01",
+        "note": "clause 119C was issued but comes into force 2026-10-01; on 2026-07-24 the prior text (if any) applies"
+      },
+      "naive": {
+        "text": "shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date. 119D. Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g012": {
+      "scenario": {
+        "entity": "SFB",
+        "family": "IRACP",
+        "clause": "133C",
+        "asOf": "2026-09-15",
+        "question": "On 15 September 2026, what SNFA income treatment applies to a Small Finance Bank under clause 133C?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "SFB",
+        "clauseNumber": "133C",
+        "asOf": "2026-09-15",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "SFB",
+            "clauseNumber": "133C",
+            "sortKey": "00133C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/196"
+          }
+        ],
+        "status": "not_yet_in_force",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": "2026-10-01",
+        "note": "clause 133C was issued but comes into force 2026-10-01; on 2026-09-15 the prior text (if any) applies"
+      },
+      "naive": {
+        "text": "shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date. 133D. Any income received from an SNFA shall be recognised in the income statement as 'non-interest / other income', in the financial year",
+        "answerEntity": "SFB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g013": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "68D",
+        "asOf": "2026-07-16",
+        "question": "On the issue date itself (16 Jul 2026), is Regional Rural Bank clause 68D in force?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "68D",
+        "asOf": "2026-07-16",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68D",
+            "sortKey": "00068D",
+            "chapter": "V",
+            "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/201"
+          }
+        ],
+        "status": "not_yet_in_force",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": "2026-10-01",
+        "note": "clause 68D was issued but comes into force 2026-10-01; on 2026-07-16 the prior text (if any) applies"
+      },
+      "naive": {
+        "text": "RBI/2027-28/045 DOR.STR.REC.180/21-04-048/2027-28 April 1, 2027 Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Third Amendment Directions, 2027 Please refer to the Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026",
+        "answerEntity": "RRB",
+        "effectiveDate": "2027-04-01",
+        "issuedDate": "2027-04-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g014": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "119D",
+        "asOf": "2026-08-31",
+        "question": "On 31 August 2026, how should a Local Area Bank treat income from an SNFA under clause 119D?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "119D",
+        "asOf": "2026-08-31",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "LAB",
+            "clauseNumber": "119D",
+            "sortKey": "00119D",
+            "chapter": "V",
+            "text": "Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year in which it is realised. Similarly, any expense incurred towards upkeep of an SNFA shall be accounted for in the income statement in the financial year in which it is incurred.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/202"
+          }
+        ],
+        "status": "not_yet_in_force",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": "2026-10-01",
+        "note": "clause 119D was issued but comes into force 2026-10-01; on 2026-08-31 the prior text (if any) applies"
+      },
+      "naive": {
+        "text": "shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date. 119D. Any income received from an SNFA shall be recognised in the income statement as ‘non-interest / other income’, in the financial year",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g015": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "68C",
+        "asOf": "2026-07-01",
+        "question": "On 1 July 2026 (before the amendment was even issued), what did Regional Rural Bank clause 68C say?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "68C",
+        "asOf": "2026-07-01",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68C",
+            "sortKey": "00068C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/201"
+          },
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "RRB",
+            "clauseNumber": "68C",
+            "sortKey": "00068C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of a Specified Non-Financial Asset (SNFA), shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on March 31, 2027, it shall be reversed through Profit and Loss account, latest by March 31, 2028, to the extent remaining unrealised as on that date.",
+            "validFrom": "2027-04-01",
+            "validTo": null,
+            "issuedDate": "2027-04-01",
+            "sourceRef": "RBI/2027-28/045"
+          }
+        ],
+        "status": "not_yet_in_force",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": "2026-10-01",
+        "note": "clause 68C was issued but comes into force 2026-10-01; on 2026-07-01 the prior text (if any) applies"
+      },
+      "naive": {
+        "text": "RBI/2027-28/090 DOR.STR.REC.201/21-04-048/2027-28 January 1, 2028 Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Fourth Amendment Directions, 2028 Please refer to the Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026",
+        "answerEntity": "RRB",
+        "effectiveDate": "2028-01-01",
+        "issuedDate": "2028-01-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g016": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "119C",
+        "asOf": "2026-09-30",
+        "question": "Is Local Area Bank clause 119C in force on 30 September 2026?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "119C",
+        "asOf": "2026-09-30",
+        "candidates": [
+          {
+            "mdFamily": "IRACP",
+            "entityCode": "LAB",
+            "clauseNumber": "119C",
+            "sortKey": "00119C",
+            "chapter": "V",
+            "text": "Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30, 2027, to the extent remaining unrealised as on that date.",
+            "validFrom": "2026-10-01",
+            "validTo": null,
+            "issuedDate": "2026-07-16",
+            "sourceRef": "RBI/2026-27/202"
+          }
+        ],
+        "status": "not_yet_in_force",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": "2026-10-01",
+        "note": "clause 119C was issued but comes into force 2026-10-01; on 2026-09-30 the prior text (if any) applies"
+      },
+      "naive": {
+        "text": "RBI/2026-27/202 DOR.STR.REC.167/21-04-048/2026-27 July 16, 2026 Reserve Bank of India (Local Area Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026 Please refer to Reserve Bank of India (Local Area Banks – Resolution of Stressed Assets) Second Amendment Directions, 2026 dated July 16,",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g017": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "119C",
+        "asOf": "2026-11-01",
+        "question": "For a Regional Rural Bank, what does clause 119C provide about SNFA interest?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "119C",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 119C does not exist for RRB"
+      },
+      "naive": {
+        "text": "case of acquisition of Specified Non-Financial Assets (SNFA) 119C. Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": true,
+          "temporal": false,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g018": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "68C",
+        "asOf": "2026-11-01",
+        "question": "For a Local Area Bank, what does clause 68C say?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "68C",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 68C does not exist for LAB"
+      },
+      "naive": {
+        "text": "do, hereby issues the Amendment Directions hereinafter specified. 3. These Amendment Directions modify the Directions as under: (i) In Chapter V – Income Recognition, for clause 68C, the following shall be substituted: \"68C. Any accrued but unrealised interest and / or charges from the extinguished",
+        "answerEntity": "RRB",
+        "effectiveDate": "2027-04-01",
+        "issuedDate": "2027-04-01",
+        "errors": {
+          "entity": true,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g019": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "133C",
+        "asOf": "2026-11-01",
+        "question": "For a Regional Rural Bank, what does clause 133C require?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "133C",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 133C does not exist for RRB"
+      },
+      "naive": {
+        "text": "RBI/2027-28/090 DOR.STR.REC.201/21-04-048/2027-28 January 1, 2028 Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Fourth Amendment Directions, 2028 Please refer to the Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026",
+        "answerEntity": "RRB",
+        "effectiveDate": "2028-01-01",
+        "issuedDate": "2028-01-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g020": {
+      "scenario": {
+        "entity": "SFB",
+        "family": "IRACP",
+        "clause": "68D",
+        "asOf": "2026-11-01",
+        "question": "For a Small Finance Bank, what does clause 68D say about SNFA income?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "SFB",
+        "clauseNumber": "68D",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 68D does not exist for SFB"
+      },
+      "naive": {
+        "text": "be recognised as income upon acquisition of the SNFA. Where such income has been recognised in respect of any SNFA outstanding in the books of a bank as on September 30, 2026, it shall be reversed through Profit and Loss account, latest by September 30,",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": true,
+          "temporal": false,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g021": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "68D",
+        "asOf": "2026-10-15",
+        "question": "For a Local Area Bank, what does clause 68D provide?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "68D",
+        "asOf": "2026-10-15",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 68D does not exist for LAB"
+      },
+      "naive": {
+        "text": "do, hereby issues the Amendment Directions hereinafter specified. 3. These Amendment Directions modify the Directions as under: (i) In Chapter V – Income Recognition, clause 68D shall be omitted. 4. The above amendment would come into force with effect from January 01, 2028. (Vaibhav Chaturvedi)",
+        "answerEntity": "RRB",
+        "effectiveDate": "2028-01-01",
+        "issuedDate": "2028-01-01",
+        "errors": {
+          "entity": true,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g022": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "119D",
+        "asOf": "2026-12-01",
+        "question": "For a Regional Rural Bank, what does clause 119D say?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "119D",
+        "asOf": "2026-12-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 119D does not exist for RRB"
+      },
+      "naive": {
+        "text": "RBI/2027-28/090 DOR.STR.REC.201/21-04-048/2027-28 January 1, 2028 Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Fourth Amendment Directions, 2028 Please refer to the Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026",
+        "answerEntity": "RRB",
+        "effectiveDate": "2028-01-01",
+        "issuedDate": "2028-01-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g023": {
+      "scenario": {
+        "entity": "SFB",
+        "family": "IRACP",
+        "clause": "119C",
+        "asOf": "2026-11-01",
+        "question": "For a Small Finance Bank, what does clause 119C provide about SNFA interest?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "SFB",
+        "clauseNumber": "119C",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 119C does not exist for SFB"
+      },
+      "naive": {
+        "text": "case of acquisition of Specified Non-Financial Assets (SNFA) 119C. Any accrued but unrealised interest and / or charges from the extinguished exposure pertaining to periods prior to acquisition of an SNFA, shall not be recognised as income upon acquisition of the SNFA. Where such income",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": true,
+          "temporal": false,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g024": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "133D",
+        "asOf": "2026-11-01",
+        "question": "For a Local Area Bank, what does clause 133D require?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "133D",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 133D does not exist for LAB"
+      },
+      "naive": {
+        "text": "RBI/2026-27/202 DOR.STR.REC.167/21-04-048/2026-27 July 16, 2026 Reserve Bank of India (Local Area Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026 Please refer to Reserve Bank of India (Local Area Banks – Resolution of Stressed Assets) Second Amendment Directions, 2026 dated July 16,",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": false,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g033": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "68Z",
+        "asOf": "2026-11-01",
+        "question": "For a Regional Rural Bank, what does clause 68Z say?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "68Z",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 68Z does not exist for RRB"
+      },
+      "naive": {
+        "text": "RBI/2027-28/090 DOR.STR.REC.201/21-04-048/2027-28 January 1, 2028 Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Fourth Amendment Directions, 2028 Please refer to the Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026",
+        "answerEntity": "RRB",
+        "effectiveDate": "2028-01-01",
+        "issuedDate": "2028-01-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g034": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "200A",
+        "asOf": "2026-11-01",
+        "question": "For a Local Area Bank, what is the text of clause 200A?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "200A",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 200A does not exist for LAB"
+      },
+      "naive": {
+        "text": "RBI/2026-27/202 DOR.STR.REC.167/21-04-048/2026-27 July 16, 2026 Reserve Bank of India (Local Area Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026 Please refer to Reserve Bank of India (Local Area Banks – Resolution of Stressed Assets) Second Amendment Directions, 2026 dated July 16,",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": false,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g035": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "70A",
+        "asOf": "2026-11-01",
+        "question": "For a Regional Rural Bank, what does clause 70A provide?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "70A",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 70A does not exist for RRB"
+      },
+      "naive": {
+        "text": "RBI/2027-28/045 DOR.STR.REC.180/21-04-048/2027-28 April 1, 2027 Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Third Amendment Directions, 2027 Please refer to the Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026",
+        "answerEntity": "RRB",
+        "effectiveDate": "2027-04-01",
+        "issuedDate": "2027-04-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g036": {
+      "scenario": {
+        "entity": "SFB",
+        "family": "IRACP",
+        "clause": "999",
+        "asOf": "2026-11-01",
+        "question": "For a Small Finance Bank, what does clause 999 say?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "SFB",
+        "clauseNumber": "999",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 999 does not exist for SFB"
+      },
+      "naive": {
+        "text": "RBI/2026-27/196 DOR.STR.REC.161/21-04-048/2026-27 July 16, 2026 Reserve Bank of India (Small Finance Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026 Please refer to Reserve Bank of India (Small Finance Banks – Resolution of Stressed Assets) Second Amendment Directions, 2026 dated July 16,",
+        "answerEntity": "SFB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": false,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g037": {
+      "scenario": {
+        "entity": "LAB",
+        "family": "IRACP",
+        "clause": "119E",
+        "asOf": "2026-11-01",
+        "question": "For a Local Area Bank, what does clause 119E require?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "LAB",
+        "clauseNumber": "119E",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 119E does not exist for LAB"
+      },
+      "naive": {
+        "text": "RBI/2026-27/202 DOR.STR.REC.167/21-04-048/2026-27 July 16, 2026 Reserve Bank of India (Local Area Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026 Please refer to Reserve Bank of India (Local Area Banks – Resolution of Stressed Assets) Second Amendment Directions, 2026 dated July 16,",
+        "answerEntity": "LAB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": false,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g038": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "IRACP",
+        "clause": "68E",
+        "asOf": "2026-11-01",
+        "question": "For a Regional Rural Bank, what does clause 68E provide about SNFAs?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "RRB",
+        "clauseNumber": "68E",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 68E does not exist for RRB"
+      },
+      "naive": {
+        "text": "RBI/2027-28/045 DOR.STR.REC.180/21-04-048/2027-28 April 1, 2027 Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Third Amendment Directions, 2027 Please refer to the Reserve Bank of India (Regional Rural Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026",
+        "answerEntity": "RRB",
+        "effectiveDate": "2027-04-01",
+        "issuedDate": "2027-04-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g039": {
+      "scenario": {
+        "entity": "SFB",
+        "family": "IRACP",
+        "clause": "133E",
+        "asOf": "2026-11-01",
+        "question": "For a Small Finance Bank, what is clause 133E?"
+      },
+      "full": {
+        "mdFamily": "IRACP",
+        "entityCode": "SFB",
+        "clauseNumber": "133E",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 133E does not exist for SFB"
+      },
+      "naive": {
+        "text": "RBI/2026-27/196 DOR.STR.REC.161/21-04-048/2026-27 July 16, 2026 Reserve Bank of India (Small Finance Banks – Income Recognition, Asset Classification and Provisioning) Second Amendment Directions, 2026 Please refer to Reserve Bank of India (Small Finance Banks – Resolution of Stressed Assets) Second Amendment Directions, 2026 dated July 16,",
+        "answerEntity": "SFB",
+        "effectiveDate": "2026-10-01",
+        "issuedDate": "2026-07-16",
+        "errors": {
+          "entity": false,
+          "temporal": false,
+          "shouldAbstain": true
+        }
+      }
+    },
+    "g040": {
+      "scenario": {
+        "entity": "RRB",
+        "family": "KYC",
+        "clause": "68C",
+        "asOf": "2026-11-01",
+        "question": "For a Regional Rural Bank, what does clause 68C say under the KYC Master Direction?"
+      },
+      "full": {
+        "mdFamily": "KYC",
+        "entityCode": "RRB",
+        "clauseNumber": "68C",
+        "asOf": "2026-11-01",
+        "candidates": [],
+        "status": "no_provision",
+        "text": null,
+        "validFrom": null,
+        "validTo": null,
+        "effectiveDate": null,
+        "note": "clause 68C does not exist for RRB"
+      },
+      "naive": {
+        "text": "do, hereby issues the Amendment Directions hereinafter specified. 3. These Amendment Directions modify the Directions as under: (i) In Chapter V – Income Recognition, for clause 68C, the following shall be substituted: \"68C. Any accrued but unrealised interest and / or charges from the extinguished",
+        "answerEntity": "RRB",
+        "effectiveDate": "2027-04-01",
+        "issuedDate": "2027-04-01",
+        "errors": {
+          "entity": false,
+          "temporal": true,
+          "shouldAbstain": true
+        }
+      }
+    }
+  }
+}

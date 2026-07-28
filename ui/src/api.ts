@@ -1,4 +1,5 @@
 // Typed client for the Express API. Dates are ISO strings ('YYYY-MM-DD').
+import { staticApi } from './staticApi';
 
 export type Status =
   | 'in_force'
@@ -113,7 +114,7 @@ async function get<T>(path: string): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-export const api = {
+const liveApi = {
   entities: () => get<Entity[]>('/api/entities'),
   clauses: (entity: string, family = 'IRACP') =>
     get<ClauseOption[]>(`/api/clauses?entity=${entity}&family=${family}`),
@@ -133,3 +134,9 @@ export const api = {
         `&as_of=${s.asOf}&question=${encodeURIComponent(s.question)}`,
     ),
 };
+
+// VITE_STATIC=1 (set for the GitHub Pages build) serves everything from a baked
+// dataset with the resolver/Ask logic running client-side — no backend needed.
+// Unset (local dev) hits the live Express API through the Vite proxy.
+export const isStatic = import.meta.env.VITE_STATIC === '1';
+export const api: typeof liveApi = isStatic ? staticApi : liveApi;
