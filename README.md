@@ -55,6 +55,22 @@ not-yet-in-force text 17% of the time — it cannot abstain. The full system mak
 
 ---
 
+## Agentic AI & LangChain
+
+Two LangChain integrations sit on top of the deterministic core:
+
+- **A tool-calling agent** (`src/rbi/agent/`, Groq-backed) — the autonomous counterpart to the
+  deterministic Ask path. It is handed the resolver's read functions as tools (`resolve_clause`,
+  `clause_history`, `find_clause`, `list_banks`), **plans** which to call, works out the bank type
+  and date, keeps conversation **memory** for follow-ups, and **abstains** instead of guessing.
+  Because its tools wrap the tested resolver, it inherits the system's entity- and time-correctness
+  — an agent that will not hallucinate a rule. (Details + how to run: [below](#agentic-query-layer-langchain--groq).)
+- **A swappable LangChain parse backend** (`PARSE_BACKEND=langchain`) — the LLM parse step can run
+  through a `ChatOllama | StrOutputParser` LCEL chain over the same local model, behind the same
+  deterministic validators as the native path.
+
+Both are optional extras; the core pipeline runs without either.
+
 ## Architecture
 
 ```mermaid
