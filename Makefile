@@ -2,7 +2,7 @@
 # POSIX make. On Windows, run targets under Git Bash or invoke the python commands directly.
 
 .PHONY: install db-up db-down db-logs test test-llm lint extract cost \
-        langchain-install db-sync-langchain \
+        langchain-install db-sync-langchain agent-install agent agent-ask \
         fetch normalise classify parse verify apply group eval pipeline aws-destroy
 
 export PYTHONPATH := src
@@ -45,6 +45,16 @@ langchain-install: ## install the optional LangChain parse backend
 
 db-sync-langchain: ## run the pipeline with the LangChain parse backend
 	PARSE_BACKEND=langchain python -m rbi.db.cli sync --model gemma4:latest
+
+# --- agent (LangChain tool-calling agent over the resolver, via Groq) ---
+agent-install:    ## install the optional Groq agent layer
+	python -m pip install -e ".[agent]"
+
+agent:            ## chat with the regulatory agent (needs GROQ_API_KEY + db-up)
+	python -m rbi.agent.cli chat
+
+agent-ask:        ## one-shot: make agent-ask Q="SNFA income for a rural bank in November 2026"
+	python -m rbi.agent.cli ask "$(Q)"
 
 # --- quality ---
 test:             ## run the test suite

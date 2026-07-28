@@ -29,6 +29,12 @@ langchain = [
     "langchain-core>=0.3.72,<1.0",
     "langchain-ollama>=0.2,<0.3",
 ]
+# Optional agentic query layer — a LangChain tool-calling agent over the resolver,
+# backed by Groq. Needs GROQ_API_KEY in the environment.
+agent = [
+    "langchain>=0.3.27,<1.0",
+    "langchain-groq>=0.3,<0.4",
+]
 dev = [
     "pytest>=8.0",
     "ruff>=0.4",

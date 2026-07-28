@@ -128,6 +128,27 @@ validators, so the guarantees above hold regardless of which one is selected.
   its own tests so both agree.* See `PROJECT_SPEC.md §10`.
 - **UI:** React + Vite + TypeScript (`ui/`) — 4 screens, time as the spatial spine
 
+## Agentic query layer (LangChain + Groq)
+
+Alongside the deterministic Ask endpoint there is an autonomous **tool-calling agent**
+(`src/rbi/agent/`). It is given the system's read functions as tools — `resolve_clause`,
+`clause_history`, `find_clause`, `list_banks` — and a Groq LLM decides which to call: it works
+out the **bank type** and the **date**, looks the rule up through the **same tested resolver**,
+remembers the conversation for follow-ups (*"and for a Local Area Bank?"*), and **abstains
+honestly** (not-yet / no-longer / no-provision) instead of guessing. Because the tools wrap the
+resolver, the agent inherits its entity- and time-correctness — an agent that will not hallucinate
+a rule. It complements the deterministic Ask path; it does not replace it.
+
+```bash
+pip install -e ".[agent]"                     # langchain + langchain-groq
+export GROQ_API_KEY=...                        # free key: https://console.groq.com/keys
+make agent                                     # interactive chat (needs the DB up)
+make agent-ask Q="SNFA income for a rural bank in November 2026"
+```
+
+Tools run against the DB with no key; the live agent round-trip is exercised by
+`tests/test_agent.py` when `GROQ_API_KEY` is set.
+
 ## Quick start
 
 ```bash

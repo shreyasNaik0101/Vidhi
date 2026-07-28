@@ -37,6 +37,10 @@ class Config:
     # (an LCEL chain over the same local model). Both feed the same validators.
     parse_backend: str = os.getenv("PARSE_BACKEND", "native")
 
+    # Agent (LangChain + Groq). GROQ_API_KEY is read from the environment by
+    # langchain-groq; only the model name lives here.
+    groq_model: str = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+
     max_spend_usd: float = float(os.getenv("MAX_SPEND_USD", "15.00"))
     llm_cache_path: Path = REPO_ROOT / os.getenv("LLM_CACHE_PATH", "data/llm_cache.db")
 
