@@ -60,7 +60,7 @@ export function AsOfExplorer() {
       <div className="card card-pad">
         <div className="controls">
           <div className="field entity">
-            <label htmlFor="entity">Regulated entity</label>
+            <label htmlFor="entity">Bank type</label>
             <select id="entity" value={entity} onChange={(e) => setEntity(e.target.value)}>
               {entities.map((e) => (
                 <option key={e.code} value={e.code}>{e.name} ({e.code})</option>
@@ -79,7 +79,7 @@ export function AsOfExplorer() {
             </select>
           </div>
           <div className="field wide">
-            <label htmlFor="asof">As of date</label>
+            <label htmlFor="asof">Date to check</label>
             <div className="stepper">
               <button className="step-btn" onClick={() => setClamped(addDays(asOf, -1))} aria-label="Previous day">−1d</button>
               <input id="asof" type="date" value={asOf} min={domain.min} max={domain.max}

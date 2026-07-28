@@ -16,10 +16,6 @@ export function ChangeFeed() {
 
   return (
     <div className="feed">
-      <p className="hint" style={{ marginBottom: 4 }}>
-        Each card is one substantive change. The fan-out shows the same policy landing at
-        different clause coordinates across entity types — with the similarity that linked them.
-      </p>
       {groups.map((g) => (
         <div key={g.id} className="card card-pad change-group">
           <div className="cg-head">

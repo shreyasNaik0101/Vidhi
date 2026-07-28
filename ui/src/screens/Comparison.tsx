@@ -30,13 +30,8 @@ export function Comparison() {
   return (
     <div className="stack">
       <div className="card card-pad">
-        <p className="hint" style={{ marginBottom: 14 }}>
-          The same question, answered by <b>naive RAG</b> (one index, nearest chunk — what most
-          projects build) and by the <b>full system</b> (entity + validity filter, then abstain if
-          nothing fits). The naive answer&rsquo;s errors are labelled.
-        </p>
         <div className="field">
-          <label htmlFor="scenario">Scenario (from the golden set)</label>
+          <label htmlFor="scenario">Pick a question to test</label>
           <select
             id="scenario"
             value={picked?.id ?? ''}
@@ -77,7 +72,7 @@ function FullPanel({ result }: { result: CompareResult }) {
   return (
     <div className="card card-pad cmp">
       <div className="cmp-head">
-        <div className="cmp-title">Full system</div>
+        <div className="cmp-title">This system</div>
         <StatusBadge status={full.status} />
       </div>
       {correct ? (
@@ -85,7 +80,7 @@ function FullPanel({ result }: { result: CompareResult }) {
       ) : (
         <p className="res-abstain">{full.note}</p>
       )}
-      <div className="cmp-verdict good">✓ Correct — entity- and date-aware, abstains when nothing is in force.</div>
+      <div className="cmp-verdict good">✓ Correct — knows the bank and the date, and abstains when nothing is in force.</div>
     </div>
   );
 }
@@ -94,7 +89,7 @@ function NaivePanel({ result }: { result: CompareResult }) {
   const { naive, scenario } = result;
   if (!naive) return (
     <div className="card card-pad cmp">
-      <div className="cmp-head"><div className="cmp-title">Naive RAG</div></div>
+      <div className="cmp-head"><div className="cmp-title">Normal AI search</div></div>
       <div className="hint">No index. Run <code>make eval-index</code>.</div>
     </div>
   );
@@ -102,7 +97,7 @@ function NaivePanel({ result }: { result: CompareResult }) {
   return (
     <div className="card card-pad cmp">
       <div className="cmp-head">
-        <div className="cmp-title">Naive RAG <span className="cmp-sub">nearest chunk</span></div>
+        <div className="cmp-title">Normal AI search <span className="cmp-sub">nearest match</span></div>
         <span className={`badge ${anyError ? 'bad' : 'neutral'}`}>
           <span className="dot" />{anyError ? 'Wrong' : 'Answered'}
         </span>
