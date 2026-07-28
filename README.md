@@ -1,12 +1,16 @@
 # RBI Regulatory Timeline Engine
 
-Answers one question that generic RAG gets **confidently wrong**:
+**Ask a banking-rule question and most AI assistants answer confidently — and wrong.** They match on
+wording alone, so they hand you *another* bank's rule, or one that hasn't taken effect yet. This
+project nails the exact question they fumble:
 
-> **For a given type of regulated entity, on a given date, what does clause X actually say?**
+> **For a given type of bank, on a given date — what does a specific rule actually say?**
 
-The system filters on **entity type** and **temporal validity** *before* it does anything
-semantic. Semantic similarity narrows within an already-correct slice; it never selects the
-slice. When nothing fits, the system **abstains** instead of guessing.
+The trick is the **order of operations.** Ordinary AI search jumps straight to *"find text that reads
+similar."* This system does the reverse: it **first narrows to the right bank and the right date,**
+then searches only inside that already-correct slice. Similarity can *rank* the answers — but it can
+never pick the wrong bank or a rule that isn't in force yet. And when nothing genuinely applies, it
+**says so, instead of making something up.**
 
 ## ▶ Live demo — [shreyasnaik0101.github.io/Vidhi](https://shreyasnaik0101.github.io/Vidhi/)
 
