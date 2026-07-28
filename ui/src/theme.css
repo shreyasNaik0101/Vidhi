@@ -582,3 +582,35 @@ body {
 }
 .foot a { color: var(--brand-ink); text-decoration: none; font-weight: 600; }
 .foot a:hover { text-decoration: underline; }
+
+/* ---- comparison: scoreboard + verdict + winner/loser ---- */
+.sb-caption { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+.sb-repro { font-size: 11.5px; color: var(--muted); }
+.sb-repro code { font-family: var(--mono); font-size: 11px; background: var(--surface-2); padding: 1px 5px; border-radius: 5px; }
+.sb { display: grid; }
+.sb-row { display: grid; grid-template-columns: 1fr 88px 96px; align-items: center; gap: 8px; padding: 10px 2px; }
+.sb-row:not(.sb-head) + .sb-row { border-top: 1px solid var(--line); }
+.sb-row.sb-head { padding-bottom: 6px; }
+.sb-head span { font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; text-align: right; }
+.sb-head .naive { color: var(--muted); }
+.sb-head .full { color: var(--now-ink); }
+.sb-metric { font-size: 13.5px; color: var(--ink-soft); }
+.sb-val { text-align: right; font-size: 19px; font-weight: 780; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.sb-val.naive { color: var(--muted); }
+.sb-val.full { color: var(--now-ink); }
+
+.verdict-banner {
+  display: flex; align-items: center; gap: 11px; padding: 13px 16px; border-radius: var(--radius);
+  font-size: 13.5px; line-height: 1.5; animation: fadeUp .28s ease;
+}
+.verdict-banner b { font-weight: 700; }
+.verdict-banner.win { background: var(--now-soft); color: var(--now-ink);
+  border: 1px solid color-mix(in srgb, var(--now) 32%, transparent); }
+.verdict-banner.tie { background: var(--surface-2); color: var(--ink-soft); border: 1px solid var(--line); }
+.vb-badge { flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+  font-weight: 800; font-size: 13px; color: #fff; }
+.verdict-banner.win .vb-badge { background: var(--now); }
+.verdict-banner.tie .vb-badge { background: var(--neutral); }
+
+.cmp.win { border-top: 3px solid var(--now); }
+.cmp.lose { border-top: 3px solid #d9583f; }

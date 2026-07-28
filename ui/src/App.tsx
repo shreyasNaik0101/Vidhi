@@ -89,18 +89,15 @@ const TABS: TabDef[] = [
 ];
 
 function useTheme() {
-  const [theme, setTheme] = useState<'light' | 'dark' | null>(
-    () => (localStorage.getItem('rbi-theme') as 'light' | 'dark') || null,
+  // Default to the cream (light) look; remember the visitor's choice after they toggle.
+  const [theme, setTheme] = useState<'light' | 'dark'>(
+    () => (localStorage.getItem('rbi-theme') as 'light' | 'dark') || 'light',
   );
   useEffect(() => {
-    const root = document.documentElement;
-    if (theme) root.setAttribute('data-theme', theme);
-    else root.removeAttribute('data-theme');
-    if (theme) localStorage.setItem('rbi-theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('rbi-theme', theme);
   }, [theme]);
-  const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
-  const effective = theme ?? (prefersDark ? 'dark' : 'light');
-  return { effective, toggle: () => setTheme(effective === 'dark' ? 'light' : 'dark') };
+  return { effective: theme, toggle: () => setTheme(theme === 'dark' ? 'light' : 'dark') };
 }
 
 export function App() {
