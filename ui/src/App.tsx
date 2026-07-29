@@ -106,62 +106,72 @@ export function App() {
   const active = TABS.find((t) => t.id === tab)!;
 
   return (
-    <div className="app">
+    <div className="shell">
       <header className="topbar">
         <div className="brand">
           <div className="brand-mark" aria-hidden><span /></div>
-          <div>
+          <div className="brand-text">
             <h1>RBI Regulatory Timeline</h1>
             <p>The right rule, for the right bank, on the right date.</p>
           </div>
         </div>
-        <button className="icon-btn" onClick={toggle} aria-label="Toggle colour theme" title="Toggle theme">
-          {effective === 'dark' ? '☀' : '☾'}
-        </button>
+        <div className="topbar-actions">
+          <a className="ghost-link" href="https://github.com/shreyasNaik0101/Vidhi" target="_blank" rel="noreferrer">
+            View code&#8201;&#8599;
+          </a>
+          <button className="icon-btn" onClick={toggle} aria-label="Toggle colour theme" title="Toggle theme">
+            {effective === 'dark' ? '☀' : '☾'}
+          </button>
+        </div>
       </header>
 
-      <nav className="nav" aria-label="Views">
-        {TABS.map((t) => (
-          <button key={t.id} aria-current={tab === t.id} onClick={() => setTab(t.id)}>
-            <span className="nav-ico" aria-hidden>{t.icon}</span>
-            <span className="nav-label">{t.label}</span>
-          </button>
-        ))}
-      </nav>
-
-      {/* Per-screen orientation: what this view is + how to use it. Ask has its own hero. */}
-      {tab !== 'ask' && (
-        <section className="guide" key={active.id}>
-          <div className="guide-head">
-            <span className="guide-ico" aria-hidden>{active.icon}</span>
-            <div>
-              <h2 className="guide-title">{active.title}</h2>
-              <p className="guide-blurb">{active.blurb}</p>
-            </div>
+      <div className="body">
+        <aside className="sidebar">
+          <nav className="side-nav" aria-label="Views">
+            {TABS.map((t) => (
+              <button key={t.id} aria-current={tab === t.id} onClick={() => setTab(t.id)}>
+                <span className="nav-ico" aria-hidden>{t.icon}</span>
+                <span className="nav-label">{t.label}</span>
+              </button>
+            ))}
+          </nav>
+          <div className="side-foot">
+            <span className="foot-dot" aria-hidden />
+            <span>Vidhi · entity- &amp; time-aware</span>
           </div>
-          {active.steps && (
-            <ol className="guide-steps">
-              {active.steps.map((s, i) => (
-                <li key={i}><span className="gs-num">{i + 1}</span><span>{s}</span></li>
-              ))}
-            </ol>
-          )}
-        </section>
-      )}
+        </aside>
 
-      <main>
-        {tab === 'ask' && <Ask />}
-        {tab === 'explorer' && <AsOfExplorer />}
-        {tab === 'changes' && <ChangeFeed />}
-        {tab === 'timeline' && <ClauseTimeline />}
-        {tab === 'comparison' && <Comparison />}
-        {tab === 'ingest' && <Ingest />}
-      </main>
+        <main className="content">
+          <div className="content-inner">
+            {/* Per-screen orientation: what this view is + how to use it. Ask has its own hero. */}
+            {tab !== 'ask' && (
+              <section className="guide" key={active.id}>
+                <div className="guide-head">
+                  <span className="guide-ico" aria-hidden>{active.icon}</span>
+                  <div>
+                    <h2 className="guide-title">{active.title}</h2>
+                    <p className="guide-blurb">{active.blurb}</p>
+                  </div>
+                </div>
+                {active.steps && (
+                  <ol className="guide-steps">
+                    {active.steps.map((s, i) => (
+                      <li key={i}><span className="gs-num">{i + 1}</span><span>{s}</span></li>
+                    ))}
+                  </ol>
+                )}
+              </section>
+            )}
 
-      <footer className="foot">
-        <span className="foot-brand"><span className="foot-dot" aria-hidden />Vidhi — regulatory answers that know <b>who</b> is asking and <b>when</b>.</span>
-        <a href="https://github.com/shreyasNaik0101/Vidhi" target="_blank" rel="noreferrer">View the code &#8599;</a>
-      </footer>
+            {tab === 'ask' && <Ask />}
+            {tab === 'explorer' && <AsOfExplorer />}
+            {tab === 'changes' && <ChangeFeed />}
+            {tab === 'timeline' && <ClauseTimeline />}
+            {tab === 'comparison' && <Comparison />}
+            {tab === 'ingest' && <Ingest />}
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
