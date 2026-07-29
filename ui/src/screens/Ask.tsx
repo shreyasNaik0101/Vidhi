@@ -50,11 +50,10 @@ export function Ask() {
     <div className="stack">
       {turns.length === 0 && (
         <div className="hero">
-          <h2 className="hero-title">Ask about a banking rule — in plain English.</h2>
+          <h2 className="hero-title">Ask about a banking rule in plain English.</h2>
           <p className="hero-sub">
-            The same rule can have a different answer depending on <b>which bank</b> and <b>which date</b> —
-            rules are often published months before they take effect. Ask a question and it works out both,
-            returns the exact wording, or honestly says a rule isn&rsquo;t in force yet.
+            The answer depends on <b>which bank</b> you mean and <b>which date</b>. Type your question
+            and it finds the exact rule, or tells you if it isn&rsquo;t in force yet.
           </p>
           <div className="hero-try">Try one:</div>
           <div className="starters">
